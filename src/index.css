@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --emerald-950: #002624;
+  --emerald-900: #003F3D;
+  --emerald-850: #004846;
+  --emerald-800: #064F4B;
+  --gold-500: #D9A441;
+  --gold-400: #E8B95B;
+  --gold-300: #F3CC78;
+  --ivory-100: #FFF5DD;
+  --ivory-200: #F8E8C9;
+  --parchment: #F5E6CC;
+  --maroon-900: #540E1B;
+  --maroon-800: #6E1323;
+  --maroon-700: #861A2A;
+  --dark-text: #1A2E2B;
+}
+
+body {
+  margin: 0;
+  background-color: #002624;
+  color: #FFF5DD;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #002624;
+}
+::-webkit-scrollbar-thumb {
+  background: #B88225;
+  border-radius: 5px;
+  border: 2px solid #002624;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D9A441;
+}
+
+/* 12-Column Responsive Container */
+.container-custom {
+  width: min(1320px, calc(100% - 120px));
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+  .container-custom {
+    width: calc(100% - 64px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    width: calc(100% - 32px);
+  }
+}
+
+/* Gold Ornamental Borders */
+.gold-border-card {
+  border: 1px solid rgba(217, 164, 65, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(217, 164, 65, 0.08);
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.gold-border-card:hover {
+  border-color: rgba(232, 185, 91, 0.85);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(217, 164, 65, 0.25);
+}
+
+/* Dual ornamental corner lines */
+.corner-decor {
+  position: relative;
+}
+.corner-decor::before, .corner-decor::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #D9A441;
+  pointer-events: none;
+}
+.corner-decor::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #E8B95B;
+  border-left: 2px solid #E8B95B;
+}
+.corner-decor::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #E8B95B;
+  border-right: 2px solid #E8B95B;
+}
+
+/* Metallic Text Shimmer */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF5DD 0%, #F3CC78 30%, #D9A441 70%, #B88225 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maroon-text-gradient {
+  background: linear-gradient(135deg, #FF7B93 0%, #D82645 50%, #861A2A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
