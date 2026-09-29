@@ -2,11 +2,7 @@ import React from 'react';
 import { Calendar, ArrowRight, MapPin, ExternalLink } from 'lucide-react';
 import { EVENT_INFO } from '../data/eventData';
 
-interface BookYourNightProps {
-  onOpenBooking: () => void;
-}
-
-export const BookYourNight: React.FC<BookYourNightProps> = ({ onOpenBooking }) => {
+export const BookYourNight: React.FC = () => {
   return (
     <section id="book-your-night" className="relative py-24 sm:py-32 bg-[#F5E6CC] text-[#1A2E2B] overflow-hidden">
       
@@ -95,7 +91,7 @@ export const BookYourNight: React.FC<BookYourNightProps> = ({ onOpenBooking }) =
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 underline hover:text-white transition-colors"
                     >
-                      <MapPin className="w-3.5 h-3.5" /> View Map Link <ExternalLink className="w-3 h-3" />
+                      <MapPin className="w-3.5 h-3.5" /> View Map <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
@@ -103,14 +99,16 @@ export const BookYourNight: React.FC<BookYourNightProps> = ({ onOpenBooking }) =
             </div>
 
             <div className="relative z-10 pt-4 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <span className="text-[11px] text-ivory-200/70">Exclusive on Fizmaa</span>
-              <button
-                onClick={onOpenBooking}
+              <span className="text-[11px] text-ivory-200/70">Tickets exclusively on Fizmaa</span>
+              <a
+                href={EVENT_INFO.fizmaaTicketUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gold-gradient text-emerald-950 font-sans font-bold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"
               >
                 <span>BOOK DAY 1 PASS</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -164,7 +162,7 @@ export const BookYourNight: React.FC<BookYourNightProps> = ({ onOpenBooking }) =
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 underline hover:text-white transition-colors"
                     >
-                      <MapPin className="w-3.5 h-3.5" /> View Map Link <ExternalLink className="w-3 h-3" />
+                      <MapPin className="w-3.5 h-3.5" /> View Map <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
@@ -172,14 +170,16 @@ export const BookYourNight: React.FC<BookYourNightProps> = ({ onOpenBooking }) =
             </div>
 
             <div className="relative z-10 pt-4 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <span className="text-[11px] text-ivory-200/70">Exclusive on Fizmaa</span>
-              <button
-                onClick={onOpenBooking}
+              <span className="text-[11px] text-ivory-200/70">Tickets exclusively on Fizmaa</span>
+              <a
+                href={EVENT_INFO.fizmaaTicketUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#F3CC78] via-[#E8B95B] to-[#D9A441] text-maroon-950 font-sans font-bold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"
               >
                 <span>BOOK DAY 2 PASS</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -191,13 +191,18 @@ export const BookYourNight: React.FC<BookYourNightProps> = ({ onOpenBooking }) =
             EXCLUSIVE OFFICIAL TICKETING PARTNER
           </p>
 
-          <div className="inline-flex items-center justify-center p-4 px-8 rounded-2xl bg-white border border-[#D9A441]/40 shadow-md hover:shadow-lg transition-all hover:scale-105">
+          <a
+            href={EVENT_INFO.fizmaaTicketUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center p-4 px-8 rounded-2xl bg-white border border-[#D9A441]/40 shadow-md hover:shadow-xl transition-all hover:scale-105"
+          >
             <img
               src="/assets/brand/fizmaa-logo.png"
               alt="Fizmaa - Exclusive Ticketing Partner"
               className="h-10 sm:h-12 w-auto object-contain"
             />
-          </div>
+          </a>
         </div>
 
       </div>

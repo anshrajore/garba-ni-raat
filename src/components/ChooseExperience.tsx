@@ -1,13 +1,8 @@
 import React from 'react';
 import { Check, ArrowRight, Crown, Users, Heart } from 'lucide-react';
-import { TICKET_TIERS } from '../data/eventData';
-import { PassCategory } from '../types';
+import { TICKET_TIERS, EVENT_INFO } from '../data/eventData';
 
-interface ChooseExperienceProps {
-  onOpenBooking: (category: PassCategory) => void;
-}
-
-export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenBooking }) => {
+export const ChooseExperience: React.FC = () => {
   return (
     <section id="choose-experience" className="relative py-24 sm:py-32 bg-emerald-950 text-ivory-100 overflow-hidden">
       
@@ -121,19 +116,21 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenBookin
                   </div>
                 </div>
 
-                {/* Book Action Button */}
+                {/* Direct Book on Fizmaa Button */}
                 <div className="pt-6 mt-4 border-t border-gold-500/20">
-                  <button
-                    onClick={() => onOpenBooking(tier.category)}
+                  <a
+                    href={EVENT_INFO.fizmaaTicketUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full py-3.5 rounded-xl font-sans font-bold text-xs uppercase tracking-[0.16em] flex items-center justify-center gap-2 transition-all duration-300 ${
                       isFeatured
                         ? 'bg-gold-gradient text-emerald-950 shadow-gold-glow hover:scale-[1.03] border border-gold-100'
                         : 'border border-gold-400/70 text-gold-200 hover:bg-gold-500 hover:text-emerald-950 hover:shadow-gold-subtle'
                     }`}
                   >
-                    <span>SELECT {tier.category} PASS</span>
+                    <span>BOOK {tier.category} PASS ON FIZMAA</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
                 </div>
 
               </div>

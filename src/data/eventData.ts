@@ -29,6 +29,7 @@ export const EVENT_INFO = {
   time: '7:00 PM – 1:00 AM (Both Nights)',
   ticketPartner: 'Fizmaa',
   fizmaaLogo: '/assets/brand/fizmaa-logo.png',
+  fizmaaTicketUrl: 'https://live.fizmaa.com/event.html?id=92',
 };
 
 export const TICKET_TIERS: TicketTier[] = [
@@ -164,7 +165,8 @@ export const SPONSORS_DATA = {
   ticketingPartner: {
     name: 'Fizmaa',
     role: 'EXCLUSIVE OFFICIAL TICKETING PARTNER',
-    logo: '/assets/brand/fizmaa-logo.png'
+    logo: '/assets/brand/fizmaa-logo.png',
+    url: 'https://live.fizmaa.com/event.html?id=92'
   }
 };
 

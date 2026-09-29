@@ -10,19 +10,10 @@ import { Sponsors } from './components/Sponsors';
 import { Gallery } from './components/Gallery';
 import { GetInTouch } from './components/GetInTouch';
 import { Footer } from './components/Footer';
-import { BookingModal } from './components/BookingModal';
 import { AudioPlayer } from './components/AudioPlayer';
-import { PassCategory } from './types';
 
 export function App() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedPassCategory, setSelectedPassCategory] = useState<PassCategory>('Legacy');
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
-
-  const handleOpenBooking = (category: PassCategory = 'Legacy') => {
-    setSelectedPassCategory(category);
-    setIsBookingOpen(true);
-  };
 
   const handleToggleAudio = () => {
     setIsAudioPlaying(!isAudioPlaying);
@@ -35,22 +26,21 @@ export function App() {
 
       {/* 01 — NAVIGATION */}
       <Navbar
-        onOpenBooking={handleOpenBooking}
         isAudioPlaying={isAudioPlaying}
         toggleAudio={handleToggleAudio}
       />
 
       {/* 02 — HERO */}
-      <Hero onOpenBooking={() => handleOpenBooking('Legacy')} />
+      <Hero />
 
       {/* 03 — BOOK YOUR NIGHT */}
-      <BookYourNight onOpenBooking={() => handleOpenBooking('Legacy')} />
+      <BookYourNight />
 
       {/* 04 — EVENT DETAILS */}
       <EventDetails />
 
       {/* 05 — CHOOSE YOUR EXPERIENCE */}
-      <ChooseExperience onOpenBooking={handleOpenBooking} />
+      <ChooseExperience />
 
       {/* 06 — VENUE & LOCATION */}
       <VenueLocation />
@@ -69,13 +59,6 @@ export function App() {
 
       {/* 11 — FOOTER */}
       <Footer />
-
-      {/* Interactive Booking & Ticketing Modal */}
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        initialCategory={selectedPassCategory}
-      />
     </div>
   );
 }
