@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowRight, Heart } from 'lucide-react';
+import { ArrowRight, Heart, Instagram, MessageCircle } from 'lucide-react';
+import { EVENT_INFO } from '../data/eventData';
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -28,9 +29,30 @@ export const Footer: React.FC = () => {
               alt="Garba Ni Raat"
               className="h-16 w-auto object-contain mb-4 filter drop-shadow-[0_2px_10px_rgba(217,164,65,0.3)]"
             />
-            <p className="text-xs text-ivory-200/80 leading-relaxed max-w-sm">
+            <p className="text-xs text-ivory-200/80 leading-relaxed max-w-sm mb-4">
               An unforgettable 2-night celebration of rhythm, royal Gujarati culture, live music, and timeless Navratri heritage in Nashik.
             </p>
+
+            <div className="flex items-center gap-3">
+              <a
+                href={EVENT_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-gold-400/50 bg-emerald-900/80 flex items-center justify-center text-gold-300 hover:text-white hover:bg-gradient-to-r hover:from-[#E1306C] hover:to-[#FD1D1D] transition-all"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href={EVENT_INFO.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-gold-400/50 bg-emerald-900/80 flex items-center justify-center text-gold-300 hover:text-white hover:bg-[#25D366] transition-all"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           {/* Col 2: Quick Links (2 Cols) */}
@@ -43,7 +65,8 @@ export const Footer: React.FC = () => {
               <li><a href="#book-your-night" className="hover:text-gold-300 transition-colors">Book Nights</a></li>
               <li><a href="#event-details" className="hover:text-gold-300 transition-colors">Event Details</a></li>
               <li><a href="#choose-experience" className="hover:text-gold-300 transition-colors">Tickets & Passes</a></li>
-              <li><a href="#sponsors" className="hover:text-gold-300 transition-colors">Sponsors</a></li>
+              <li><a href="#venue" className="hover:text-gold-300 transition-colors">Venues</a></li>
+              <li><a href="#sponsors" className="hover:text-gold-300 transition-colors">Partners</a></li>
               <li><a href="#gallery" className="hover:text-gold-300 transition-colors">Gallery</a></li>
             </ul>
           </div>
@@ -67,7 +90,7 @@ export const Footer: React.FC = () => {
               SUBSCRIBE FOR UPDATES
             </span>
             <p className="text-xs text-ivory-200/80 mb-3">
-              Receive schedule releases, exclusive early bird alerts, and artist lineup announcements.
+              Receive schedule releases, exclusive artist lineup announcements, and festival updates.
             </p>
 
             <form onSubmit={handleSubscribe} className="flex gap-2">

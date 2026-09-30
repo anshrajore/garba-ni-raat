@@ -1,17 +1,22 @@
 import React from 'react';
-import { Check, ArrowRight, Crown, Users, Heart } from 'lucide-react';
+import { Check, ArrowRight, Crown, Users, Heart, Sparkles, Flame, ShieldCheck } from 'lucide-react';
 import { TICKET_TIERS, EVENT_INFO } from '../data/eventData';
 
 export const ChooseExperience: React.FC = () => {
   return (
     <section id="choose-experience" className="relative py-24 sm:py-32 bg-emerald-950 text-ivory-100 overflow-hidden">
       
-      {/* Decorative Ornaments in corners */}
+      {/* Decorative Dandiya & Mandala Backgrounds */}
       <div className="absolute top-0 left-0 w-32 sm:w-48 opacity-20 pointer-events-none">
         <img src="/assets/ornaments/mandala-corner.png" alt="" className="w-full h-auto" />
       </div>
       <div className="absolute top-0 right-0 w-32 sm:w-48 opacity-20 pointer-events-none -scale-x-100">
         <img src="/assets/ornaments/mandala-corner.png" alt="" className="w-full h-auto" />
+      </div>
+
+      {/* Floating Crossed Dandiya graphic in background */}
+      <div className="absolute top-1/2 right-4 w-28 opacity-15 pointer-events-none hidden lg:block rotate-12">
+        <img src="/assets/ornaments/crossed-dandiya.png" alt="" className="w-full h-auto" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -20,8 +25,10 @@ export const ChooseExperience: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="h-[1px] w-12 bg-gold-400/60" />
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gold-300">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gold-300 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5" />
               OFFICIAL FESTIVAL TICKETS
+              <Sparkles className="w-3.5 h-3.5" />
             </span>
             <span className="h-[1px] w-12 bg-gold-400/60" />
           </div>
@@ -39,28 +46,33 @@ export const ChooseExperience: React.FC = () => {
           </div>
         </div>
 
-        {/* 3 Master Pricing Tier Cards */}
+        {/* 3 Master Pricing Tier Cards - COVER PASS FIRST & ELEVATED FOR CONVERSION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
           
-          {TICKET_TIERS.map((tier) => {
-            const isFeatured = tier.isPopular; // Cover Pass is now isPopular = true
+          {TICKET_TIERS.map((tier, idx) => {
+            const isFeatured = tier.isPopular; // Cover Pass is index 0 and isPopular = true
 
             return (
               <div
                 key={tier.category}
                 className={`relative rounded-2xl flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 ${
                   isFeatured
-                    ? 'bg-gradient-to-b from-maroon-800 via-maroon-900 to-[#32060E] border-2 border-gold-300 shadow-gold-glow md:scale-105 z-20'
+                    ? 'bg-gradient-to-b from-maroon-800 via-maroon-900 to-[#32060E] border-2 border-gold-300 shadow-gold-glow md:scale-105 z-20 order-first'
                     : 'bg-emerald-900/70 border border-gold-500/40 shadow-xl z-10'
                 } p-7 sm:p-8 corner-decor`}
               >
                 {/* Popular Crown Badge for Cover Pass */}
-                {isFeatured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-emerald-950 text-[11px] font-bold tracking-widest uppercase flex items-center gap-1.5 shadow-gold-glow border border-gold-100">
+                {isFeatured ? (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-emerald-950 text-[11px] font-bold tracking-widest uppercase flex items-center gap-1.5 shadow-gold-glow border border-gold-100 whitespace-nowrap">
                     <Crown className="w-3.5 h-3.5" />
-                    MOST POPULAR PASS
+                    #1 MOST POPULAR • F&B INCLUDED
                   </div>
-                )}
+                ) : tier.category === 'Legacy' ? (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-emerald-950 border border-gold-400 text-gold-300 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
+                    <Flame className="w-3 h-3 text-gold-400" />
+                    ROYAL VIP PASS
+                  </div>
+                ) : null}
 
                 <div>
                   {/* Category Title */}
@@ -81,18 +93,27 @@ export const ChooseExperience: React.FC = () => {
                     {tier.options.map((opt) => (
                       <div
                         key={opt.type}
-                        className="flex items-center justify-between p-3 rounded-xl bg-black/25 border border-gold-500/20 hover:border-gold-400/50 transition-colors"
+                        className={`flex items-center justify-between p-3.5 rounded-xl border transition-colors ${
+                          isFeatured
+                            ? 'bg-black/40 border-gold-300/40 hover:border-gold-300'
+                            : 'bg-black/25 border-gold-500/20 hover:border-gold-400/50'
+                        }`}
                       >
-                        <div className="flex items-center gap-2">
-                          {opt.type === 'Single' && <span className="text-gold-400 text-xs font-semibold">1x</span>}
-                          {opt.type === 'Couple' && <Heart className="w-3.5 h-3.5 text-maroon-400" />}
-                          {opt.type === 'SPAX' && <Users className="w-3.5 h-3.5 text-gold-300" />}
-                          <span className="text-xs sm:text-sm font-semibold text-ivory-100 uppercase tracking-wide">
-                            {opt.type}
+                        <div>
+                          <div className="flex items-center gap-2">
+                            {opt.type === 'Single' && <span className="text-gold-400 text-xs font-semibold">1x</span>}
+                            {opt.type === 'Couple' && <Heart className="w-3.5 h-3.5 text-maroon-400" />}
+                            {opt.type === 'SPAX' && <Users className="w-3.5 h-3.5 text-gold-300" />}
+                            <span className="text-xs sm:text-sm font-semibold text-ivory-100 uppercase tracking-wide">
+                              {opt.type}
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-ivory-200/60 block mt-0.5">
+                            {opt.description}
                           </span>
                         </div>
                         <div className="text-right">
-                          <span className="font-serif text-lg sm:text-xl font-bold text-gold-300">
+                          <span className="font-serif text-lg sm:text-2xl font-bold text-gold-300">
                             ₹{opt.price.toLocaleString('en-IN')}
                           </span>
                         </div>

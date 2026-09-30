@@ -21,8 +21,8 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-emerald-950 text-ivory-100 font-sans selection:bg-gold-500 selection:text-emerald-950">
-      {/* Background Tanpura Ambient Player */}
-      <AudioPlayer isPlaying={isAudioPlaying} />
+      {/* Authentic Garba Music Player (with Navbar & Floating Widget controls) */}
+      <AudioPlayer isPlaying={isAudioPlaying} onToggle={handleToggleAudio} />
 
       {/* 01 — NAVIGATION */}
       <Navbar
@@ -39,7 +39,7 @@ export function App() {
       {/* 04 — EVENT DETAILS */}
       <EventDetails />
 
-      {/* 05 — CHOOSE YOUR EXPERIENCE */}
+      {/* 05 — CHOOSE YOUR EXPERIENCE (Cover Pass First) */}
       <ChooseExperience />
 
       {/* 06 — VENUE & LOCATION */}

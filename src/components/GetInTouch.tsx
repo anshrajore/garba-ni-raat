@@ -1,11 +1,16 @@
 import React from 'react';
-import { Phone, Mail, MessageCircle, Instagram, Facebook, Youtube, Linkedin } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Instagram, ExternalLink } from 'lucide-react';
 import { EVENT_INFO } from '../data/eventData';
 
 export const GetInTouch: React.FC = () => {
   return (
     <section id="contact" className="relative py-24 sm:py-32 bg-[#F5E6CC] text-[#1A2E2B] overflow-hidden">
       
+      {/* Corner Mandalas */}
+      <div className="absolute top-0 left-0 w-36 opacity-20 pointer-events-none">
+        <img src="/assets/ornaments/mandala-corner.png" alt="" className="w-full h-auto filter brightness-50" />
+      </div>
+
       <div className="container-custom relative z-10">
         
         {/* Section Header */}
@@ -29,7 +34,7 @@ export const GetInTouch: React.FC = () => {
         {/* 7 + 5 Column Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto items-stretch">
           
-          {/* Left: 3 Direct Contact Blocks (7 Cols) */}
+          {/* Left: Direct Contact Blocks (7 Cols) */}
           <div className="lg:col-span-7 space-y-4">
             
             {/* Phone */}
@@ -90,40 +95,31 @@ export const GetInTouch: React.FC = () => {
 
           </div>
 
-          {/* Right: Social Channels (5 Cols) */}
-          <div className="lg:col-span-5 p-7 rounded-2xl bg-emerald-900 text-ivory-100 border border-gold-400/50 shadow-xl flex flex-col justify-between corner-decor">
+          {/* Right: Official Instagram Card (5 Cols) */}
+          <div className="lg:col-span-5 p-7 rounded-2xl bg-gradient-to-br from-emerald-900 via-emerald-950 to-[#2A0812] text-ivory-100 border border-gold-400/50 shadow-xl flex flex-col justify-between corner-decor">
             <div>
               <span className="text-xs uppercase font-mono tracking-[0.2em] text-gold-400 font-bold block mb-1">
-                STAY CONNECTED
+                OFFICIAL INSTAGRAM
               </span>
-              <h3 className="font-serif text-2xl font-bold text-ivory-100 tracking-wide mb-3">
-                FOLLOW THE CELEBRATION
+              <h3 className="font-serif text-2xl font-bold text-ivory-100 tracking-wide mb-2">
+                @garbaniraat_
               </h3>
               <p className="text-xs text-ivory-200/80 leading-relaxed mb-6">
-                Catch behind-the-scenes artist announcements, passes giveaways, and festive highlights.
+                Follow our official Instagram for exclusive artist reveals, passes giveaways, Dandiya workshops, and live festival stories.
               </p>
             </div>
 
-            {/* Circular Social Icons */}
-            <div className="flex flex-wrap gap-3">
-              {[
-                { icon: <Instagram className="w-5 h-5" />, label: 'Instagram', href: 'https://instagram.com' },
-                { icon: <Facebook className="w-5 h-5" />, label: 'Facebook', href: 'https://facebook.com' },
-                { icon: <Youtube className="w-5 h-5" />, label: 'YouTube', href: 'https://youtube.com' },
-                { icon: <Linkedin className="w-5 h-5" />, label: 'LinkedIn', href: 'https://linkedin.com' },
-                { icon: <MessageCircle className="w-5 h-5" />, label: 'WhatsApp', href: EVENT_INFO.whatsappLink }
-              ].map((social, sIdx) => (
-                <a
-                  key={sIdx}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-11 h-11 rounded-full border border-gold-400/50 bg-emerald-950/70 flex items-center justify-center text-gold-300 hover:text-emerald-950 hover:bg-gold-gradient hover:border-gold-300 transition-all duration-300 hover:scale-110 shadow-gold-subtle"
-                >
-                  {social.icon}
-                </a>
-              ))}
+            <div>
+              <a
+                href={EVENT_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#E1306C] via-[#FD1D1D] to-[#F77737] text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:scale-105 transition-all"
+              >
+                <Instagram className="w-4 h-4" />
+                <span>Follow @garbaniraat_</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 

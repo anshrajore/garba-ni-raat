@@ -26,40 +26,43 @@ export const EVENT_INFO = {
   email: 'Event.circle07@gmail.com',
   whatsappNumber: '918554018129',
   whatsappLink: 'https://wa.me/918554018129?text=Hello%20Garba%20Ni%20Raat%20Team!%20I%20would%20like%20to%20inquire%20about%20booking%20passes.',
+  instagramUrl: 'https://www.instagram.com/garbaniraat_/',
+  instagramHandle: '@garbaniraat_',
   time: '7:00 PM – 1:00 AM (Both Nights)',
   ticketPartner: 'Fizmaa',
   fizmaaLogo: '/assets/brand/fizmaa-logo.png',
   fizmaaTicketUrl: 'https://live.fizmaa.com/event.html?id=92',
 };
 
+// COVER PASS FIRST for maximum sales conversion and revenue optimization
 export const TICKET_TIERS: TicketTier[] = [
   {
-    category: 'Democracy',
-    tagline: 'Pure festive energy for every Garba enthusiast',
-    theme: 'emerald',
+    category: 'Cover',
+    tagline: 'All-inclusive passes with premium food & beverage redemption included',
+    isPopular: true,
+    theme: 'maroon',
     features: [
-      'Full Ground Entry Access',
-      'Traditional Garba & Raas Arena',
-      'Food & Beverage Court Access',
-      'Complimentary Dandiya Sticks (First 500 Entries)',
-      'High-Energy Live Band & Dhol Performances'
+      'Fast-Track VIP & Royal Lounge Entry',
+      '₹800 / ₹1,600 F&B Value Redeemable at Stalls',
+      'Complimentary Handcrafted Dandiya Pair',
+      'Royal Seating & Refreshment Pavilion Access',
+      'Valet Parking & Dedicated Event Concierge'
     ],
     options: [
-      { type: 'Single', price: 399, description: 'Individual entry pass' },
-      { type: 'Couple', price: 749, description: '1 Female + 1 Male entry pass' },
-      { type: 'SPAX', price: 1799, description: 'Group Pass for up to 5 members' }
+      { type: 'Single', price: 1199, description: 'Cover Single (includes ₹800 F&B credit)' },
+      { type: 'Couple', price: 2269, description: 'Cover Couple (includes ₹1,600 F&B credit)' }
     ]
   },
   {
     category: 'Legacy',
-    tagline: 'The royal festive experience & priority hospitality',
+    tagline: 'The royal festive experience with priority VIP fast-track access',
     theme: 'emerald',
     features: [
-      'Priority Fast-Track Gate Entry',
-      'Exclusive Viewing & Dancing Lounge',
-      'Welcome Festive Refreshment',
-      'Premium Handcrafted Dandiya Pair',
-      'Dedicated Cultural Photo-booths'
+      'Priority VIP Fast-Track Gate Entry',
+      'Exclusive Viewing & Dancing Arena',
+      'Welcome Festive Refreshment Drink',
+      'Handcrafted Dandiya Pair Included',
+      'Dedicated Cultural Photo-booth Access'
     ],
     options: [
       { type: 'Single', price: 599, description: 'Individual VIP entry pass' },
@@ -68,20 +71,20 @@ export const TICKET_TIERS: TicketTier[] = [
     ]
   },
   {
-    category: 'Cover',
-    tagline: 'All-inclusive passes with premium food & beverage redemption',
-    isPopular: true,
-    theme: 'maroon',
+    category: 'Democracy',
+    tagline: 'Pure energetic celebration for every Garba enthusiast',
+    theme: 'emerald',
     features: [
-      'Fast-Track VIP & Lounge Access',
-      'Full Value Redeemable at Gourmet Stalls',
-      'Royal Seating & Refreshment Pavilion',
-      'Custom Garba Ni Raat Souvenir Kit',
-      'Valet Parking & Dedicated Concierge'
+      'Full Arena Entry Access',
+      'Traditional Garba & Raas Circle',
+      'Food & Beverage Court Access',
+      'Complimentary Dandiya Sticks (First 500 Entries)',
+      'High-Energy Live Band & Dhol Performances'
     ],
     options: [
-      { type: 'Single', price: 1199, description: 'Cover Single pass with ₹800 F&B credit' },
-      { type: 'Couple', price: 2269, description: 'Cover Couple pass with ₹1,600 F&B credit' }
+      { type: 'Single', price: 399, description: 'Individual entry pass' },
+      { type: 'Couple', price: 749, description: '1 Female + 1 Male entry pass' },
+      { type: 'SPAX', price: 1799, description: 'Group Pass for up to 5 members' }
     ]
   }
 ];
