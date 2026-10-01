@@ -121,10 +121,13 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-ivory-200/60 gap-4">
-          <p>© 2026 Garba Ni Raat. Presented by Event Circle & FestHaus Productions.</p>
+          <div className="flex items-center gap-2">
+            <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
+            <p>© 2026 Garba Ni Raat. Presented by Event Circle, FestHaus Productions & Eventverse Studio.</p>
+          </div>
           <p className="flex items-center gap-1">
             <span>Designed with</span>
-            <Heart className="w-3.5 h-3.5 text-maroon-500 fill-maroon-500" />
+            <Heart className="w-3.5 h-3.5 text-[#EB1537] fill-[#EB1537]" />
             <span>for the spirit of Navratri • Nashik</span>
           </p>
         </div>

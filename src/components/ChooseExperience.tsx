@@ -7,16 +7,16 @@ export const ChooseExperience: React.FC = () => {
     <section id="choose-experience" className="relative py-24 sm:py-32 bg-emerald-950 text-ivory-100 overflow-hidden">
       
       {/* Decorative Dandiya & Mandala Backgrounds */}
-      <div className="absolute top-0 left-0 w-32 sm:w-48 opacity-20 pointer-events-none">
-        <img src="/assets/ornaments/mandala-corner.png" alt="" className="w-full h-auto" />
+      <div className="absolute top-0 left-0 w-36 sm:w-56 opacity-30 pointer-events-none">
+        <img src="/assets/ornaments/mandala-left-accent.png" alt="" className="w-full h-auto" />
       </div>
-      <div className="absolute top-0 right-0 w-32 sm:w-48 opacity-20 pointer-events-none -scale-x-100">
-        <img src="/assets/ornaments/mandala-corner.png" alt="" className="w-full h-auto" />
+      <div className="absolute top-0 right-0 w-36 sm:w-56 opacity-30 pointer-events-none">
+        <img src="/assets/ornaments/mandala-right-accent.png" alt="" className="w-full h-auto" />
       </div>
 
-      {/* Floating Crossed Dandiya graphic in background */}
-      <div className="absolute top-1/2 right-4 w-28 opacity-15 pointer-events-none hidden lg:block rotate-12">
-        <img src="/assets/ornaments/crossed-dandiya.png" alt="" className="w-full h-auto" />
+      {/* Floating HD Crossed Dandiya in background */}
+      <div className="absolute top-1/2 -right-6 w-32 sm:w-44 opacity-25 pointer-events-none hidden lg:block rotate-12 filter drop-shadow-lg">
+        <img src="/assets/ornaments/crossed-dandiya-hd.png" alt="" className="w-full h-auto" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -25,10 +25,10 @@ export const ChooseExperience: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="h-[1px] w-12 bg-gold-400/60" />
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gold-300 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5" />
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gold-300 flex items-center gap-2">
+              <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
               OFFICIAL FESTIVAL TICKETS
-              <Sparkles className="w-3.5 h-3.5" />
+              <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
             </span>
             <span className="h-[1px] w-12 bg-gold-400/60" />
           </div>

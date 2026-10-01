@@ -22,6 +22,23 @@ export const Hero: React.FC = () => {
         `
       }} />
 
+      {/* Ambient Floating Royal Dupatta & Festive Ornaments */}
+      <div className="absolute -top-6 right-0 w-64 sm:w-96 lg:w-[480px] pointer-events-none opacity-30 sm:opacity-45 z-0 animate-float-slow">
+        <img
+          src="/assets/ornaments/royal-dupatta-drape.png"
+          alt=""
+          className="w-full h-auto object-contain filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
+        />
+      </div>
+
+      <div className="absolute top-1/4 -left-12 w-40 sm:w-56 pointer-events-none opacity-20 sm:opacity-30 z-0 rotate-[-15deg]">
+        <img
+          src="/assets/ornaments/crossed-dandiya-hd.png"
+          alt=""
+          className="w-full h-auto object-contain"
+        />
+      </div>
+
       {/* Atmospheric Vignette overlay for text legibility while preserving artwork */}
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/40 via-transparent to-emerald-950/80 pointer-events-none z-0" />
 
@@ -33,10 +50,11 @@ export const Hero: React.FC = () => {
         
         {/* Badge Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-400/50 bg-emerald-950/70 backdrop-blur-md mb-6 shadow-gold-subtle">
-          <Sparkles className="w-3.5 h-3.5 text-gold-300" />
+          <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
           <span className="text-[11px] sm:text-xs tracking-[0.2em] uppercase font-semibold text-gold-300">
             THE GRAND ROYAL NAVRATRI CELEBRATION
           </span>
+          <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
         </div>
 
         {/* Master Logo Wordmark */}

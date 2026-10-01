@@ -18,24 +18,26 @@ export const BookYourNight: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="w-48 sm:w-64 mx-auto mb-2 opacity-85">
+            <img src="/assets/ornaments/mandala-header-banner.png" alt="" className="w-full h-auto object-contain" />
+          </div>
+
+          <div className="flex items-center justify-center gap-3 mb-2">
             <span className="h-[1px] w-12 bg-[#8A5A1A]" />
-            <span className="text-xs uppercase tracking-[0.22em] font-semibold text-[#8A5A1A]">
+            <span className="text-xs uppercase tracking-[0.22em] font-semibold text-[#8A5A1A] flex items-center gap-2">
+              <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-3.5 h-3.5 object-contain" />
               RESERVE YOUR PASS
+              <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-3.5 h-3.5 object-contain" />
             </span>
             <span className="h-[1px] w-12 bg-[#8A5A1A]" />
           </div>
           
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#2B1B10] mb-3">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#2B1B10] mb-2">
             BOOK YOUR NIGHT
           </h2>
           <p className="text-sm sm:text-base tracking-[0.16em] uppercase font-medium text-[#6E4B28]">
             {EVENT_INFO.subtitle}
           </p>
-
-          <div className="w-24 h-4 mx-auto mt-4 opacity-75">
-            <img src="/assets/ornaments/floral-divider.png" alt="" className="w-full h-auto object-contain" />
-          </div>
         </div>
 
         {/* Two Large Horizontal Event Cards (6 + 6 Columns) */}
