@@ -98,14 +98,23 @@ export const GetInTouch: React.FC = () => {
           {/* Right: Official Instagram Card (5 Cols) */}
           <div className="lg:col-span-5 p-7 rounded-2xl bg-gradient-to-br from-emerald-900 via-emerald-950 to-[#2A0812] text-ivory-100 border border-gold-400/50 shadow-xl flex flex-col justify-between corner-decor">
             <div>
-              <span className="text-xs uppercase font-mono tracking-[0.2em] text-gold-400 font-bold block mb-1">
-                OFFICIAL INSTAGRAM
+              {/* Colorful Social Media Brand Logo */}
+              <div className="h-20 w-full flex items-center justify-start mb-3">
+                <img
+                  src={EVENT_INFO.colorfulLogo}
+                  alt="Garba Ni Raat Official Social Logo"
+                  className="max-h-full max-w-[170px] object-contain filter drop-shadow-md"
+                />
+              </div>
+
+              <span className="text-[10px] uppercase font-mono tracking-[0.2em] text-gold-400 font-bold block mb-1">
+                OFFICIAL INSTAGRAM COMMUNITY
               </span>
               <h3 className="font-serif text-2xl font-bold text-ivory-100 tracking-wide mb-2">
                 @garbaniraat_
               </h3>
               <p className="text-xs text-ivory-200/80 leading-relaxed mb-6">
-                Follow our official Instagram for exclusive artist reveals, passes giveaways, Dandiya workshops, and live festival stories.
+                Follow our official social channel for exclusive artist reveals, passes giveaways, Dandiya workshops, and live festival updates.
               </p>
             </div>
 

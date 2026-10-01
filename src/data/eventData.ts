@@ -28,6 +28,7 @@ export const EVENT_INFO = {
   whatsappLink: 'https://wa.me/918554018129?text=Hello%20Garba%20Ni%20Raat%20Team!%20I%20would%20like%20to%20inquire%20about%20booking%20passes.',
   instagramUrl: 'https://www.instagram.com/garbaniraat_/',
   instagramHandle: '@garbaniraat_',
+  colorfulLogo: '/assets/brand/garba-ni-raat-colorful-logo.png',
   time: '7:00 PM – 1:00 AM (Both Nights)',
   ticketPartner: 'Fizmaa',
   fizmaaLogo: '/assets/brand/fizmaa-logo.png',
@@ -173,6 +174,12 @@ export const PARTNERS_DATA = {
       tagline: 'Grand Experiential Productions',
       role: 'PRESENTED BY',
       logo: '/assets/partners/festhaus-logo.png'
+    },
+    {
+      name: 'Eventverse Studio',
+      tagline: 'Event Verse Production & Infrastructure',
+      role: 'PRESENTED BY',
+      logo: '/assets/partners/eventverse-logo.png'
     }
   ],
 
@@ -180,12 +187,14 @@ export const PARTNERS_DATA = {
     name: 'The Team Indian Fitness',
     role: 'POWERED BY',
     tagline: 'Official Fitness & Energy Partner',
+    logo: '/assets/partners/team-indian-fitness-logo.png'
   },
 
   rentalPartner: {
     name: 'Eventverse Studio',
     role: 'OFFICIAL RENTAL PARTNER',
     tagline: 'Event Verse Production & Infrastructure',
+    logo: '/assets/partners/eventverse-logo.png'
   },
 
   gamingPartner: {
@@ -204,42 +213,66 @@ export const PARTNERS_DATA = {
 
   foodAndLifestyle: [
     {
-      name: 'Sadhana Misal',
+      name: 'Sadhana Rajeshahi',
       role: 'OFFICIAL NASHIK MISAL PARTNER',
-      tagline: 'Authentic Chulivarchi Misal of Nashik'
+      tagline: 'Authentic Chulivarchi Misal of Nashik',
+      logo: '/assets/partners/sadhana-rajeshahi-logo.png'
     },
     {
-      name: 'Vishal Salon',
+      name: 'Vishal\'s Salon & Wellness Center',
       role: 'OFFICIAL GROOMING & STYLING PARTNER',
-      tagline: 'Luxury Salon & Festive Styling'
+      tagline: 'Hair | Beauty | Nails | Makeup',
+      logo: '/assets/partners/vishal-salon-logo.png'
     }
-  ]
+  ],
+
+  hospitalityPartner: {
+    name: 'Sadhana Village Resort',
+    role: 'OFFICIAL HOSPITALITY PARTNER',
+    tagline: 'Stay & Celebrate — Premium Resort Experience',
+    logo: '/assets/partners/sadhana-village-resort-logo.png'
+  }
 };
 
 export const GALLERY_PHOTOS = [
   {
+    src: '/assets/gallery/garba-group-celebration.jpg',
+    title: 'The Grand Celebration',
+    desc: 'Winners & performers celebrate on the Garba Ni Raat stage'
+  },
+  {
+    src: '/assets/gallery/garba-stage-lights.jpg',
+    title: 'Grand Stage & Laser Lights',
+    desc: 'Breathtaking light production and festive ambience'
+  },
+  {
+    src: '/assets/gallery/garba-confetti-dance.jpg',
+    title: 'Confetti Shower',
+    desc: 'Thousands dancing under a spectacular confetti shower'
+  },
+  {
+    src: '/assets/gallery/garba-dance-floor.jpg',
+    title: 'Vibrant Dance Arena',
+    desc: 'Colorful traditional attire and energetic Raas circles'
+  },
+  {
+    src: '/assets/gallery/garba-crowd-arena.jpg',
+    title: 'Packed Arena',
+    desc: 'The electrifying energy of a full-house Garba night'
+  },
+  {
+    src: '/assets/gallery/garba-live-band.png',
+    title: 'Live Band Performance',
+    desc: 'Soulful live music lighting up the grand stage'
+  },
+  {
+    src: '/assets/gallery/garba-stage-wide.png',
+    title: 'The Grand Stage',
+    desc: 'Panoramic view of the iconic Garba Ni Raat stage & crowd'
+  },
+  {
     src: '/assets/gallery/garba-real-trophy.jpg',
-    title: 'Garba Ni Raat Grand Trophy Stage',
-    desc: 'Euphoric winners & artist celebration from the authentic grand season'
-  },
-  {
-    src: '/assets/gallery/venue-democracy.jpg',
-    title: 'Democracy Open Air Lawns',
-    desc: 'Spectacular aerial view of the Day 2 Grand Finale arena'
-  },
-  {
-    src: '/assets/gallery/venue-legacy.jpg',
-    title: 'Legacy Banquet & Lawns',
-    desc: 'Majestic Day 1 opening venue with state-of-the-art facilities'
-  },
-  {
-    src: '/assets/gallery/gallery-1.jpg',
-    title: 'Euphoric Dance Circles',
-    desc: 'Hundreds of synchronized dancers under starlit canopies'
-  },
-  {
-    src: '/assets/gallery/gallery-3.jpg',
-    title: 'The Sacred Dandiya Clack',
-    desc: 'Intricate rhythm sticks crossing in timeless celebration'
+    title: 'Trophy Ceremony',
+    desc: 'Euphoric winners from the grand season finale'
   }
 ];

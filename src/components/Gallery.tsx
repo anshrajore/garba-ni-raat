@@ -28,13 +28,13 @@ export const Gallery: React.FC = () => {
           </div>
         </div>
 
-        {/* 5-Image Horizontal Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
+        {/* 8-Image Gallery Grid — 4 cols on large screens, 2 cols on tablets */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
           {GALLERY_PHOTOS.map((photo, idx) => (
             <div
               key={idx}
               onClick={() => setSelectedPhoto(idx)}
-              className="group relative rounded-xl overflow-hidden cursor-pointer gold-border-card aspect-[4/5] bg-emerald-900"
+              className="group relative rounded-xl overflow-hidden cursor-pointer gold-border-card bg-emerald-900 aspect-[4/3]"
             >
               <img
                 src={photo.src}
@@ -49,6 +49,7 @@ export const Gallery: React.FC = () => {
                 <h3 className="font-serif text-sm font-bold text-ivory-100 leading-tight">
                   {photo.title}
                 </h3>
+                <p className="text-[11px] text-ivory-200/70 mt-0.5 line-clamp-1">{photo.desc}</p>
                 <div className="mt-2 flex items-center gap-1 text-[11px] text-gold-300 font-medium">
                   <Maximize2 className="w-3.5 h-3.5" />
                   <span>View Full Photo</span>
