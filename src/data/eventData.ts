@@ -34,7 +34,7 @@ export const EVENT_INFO = {
   fizmaaTicketUrl: 'https://live.fizmaa.com/event.html?id=92',
 };
 
-// COVER PASS FIRST for maximum sales conversion and revenue optimization
+// COVER PASS FIRST for maximum sales conversion
 export const TICKET_TIERS: TicketTier[] = [
   {
     category: 'Cover',
@@ -156,21 +156,64 @@ export const FEATURES: FeatureItem[] = [
   }
 ];
 
-export const SPONSORS_DATA = {
+// STRUCTURED CATEGORY-WISE OFFICIAL SPONSORS & PARTNERS
+export const PARTNERS_DATA = {
   headline: 'OFFICIAL FESTIVAL PARTNERS',
-  subtitle: 'POWERED BY EXCELLENCE & PASSION',
-  primaryPartner: {
-    name: 'TBH',
-    role: 'OFFICIAL PRESENTING & LIFESTYLE PARTNER',
-    tagline: 'To Be Honest • Authentic Lifestyle & Taste',
-    desc: 'Partnering with Garba Ni Raat 2026 to bring premium hospitality, authentic youth energy, and unforgettable festive experiences.'
+  subtitle: 'IN PARTNERSHIP FOR A GRANDER CELEBRATION',
+
+  presentedBy: [
+    {
+      name: 'Event Circle',
+      tagline: 'An Event Company',
+      role: 'PRESENTED BY',
+      logo: '/assets/partners/event-circle-logo.png'
+    },
+    {
+      name: 'FestHaus Productions',
+      tagline: 'Grand Experiential Productions',
+      role: 'PRESENTED BY',
+      logo: '/assets/partners/festhaus-logo.png'
+    }
+  ],
+
+  poweredBy: {
+    name: 'The Team Indian Fitness',
+    role: 'POWERED BY',
+    tagline: 'Official Fitness & Energy Partner',
   },
+
+  rentalPartner: {
+    name: 'Eventverse Studio',
+    role: 'OFFICIAL RENTAL PARTNER',
+    tagline: 'Event Verse Production & Infrastructure',
+  },
+
+  gamingPartner: {
+    name: 'Fizzyfox',
+    role: 'OFFICIAL GAMING ZONE PARTNER',
+    logo: '/assets/partners/fizzyfox-logo.png',
+    tagline: 'Exciting Festive Gaming & Entertainment Arena'
+  },
+
   ticketingPartner: {
     name: 'Fizmaa',
     role: 'EXCLUSIVE OFFICIAL TICKETING PARTNER',
     logo: '/assets/brand/fizmaa-logo.png',
     url: 'https://live.fizmaa.com/event.html?id=92'
-  }
+  },
+
+  foodAndLifestyle: [
+    {
+      name: 'Sadhana Misal',
+      role: 'OFFICIAL NASHIK MISAL PARTNER',
+      tagline: 'Authentic Chulivarchi Misal of Nashik'
+    },
+    {
+      name: 'Vishal Salon',
+      role: 'OFFICIAL GROOMING & STYLING PARTNER',
+      tagline: 'Luxury Salon & Festive Styling'
+    }
+  ]
 };
 
 export const GALLERY_PHOTOS = [

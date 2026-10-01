@@ -29,8 +29,8 @@ export const Footer: React.FC = () => {
               alt="Garba Ni Raat"
               className="h-16 w-auto object-contain mb-4 filter drop-shadow-[0_2px_10px_rgba(217,164,65,0.3)]"
             />
-            <p className="text-xs text-ivory-200/80 leading-relaxed max-w-sm mb-4">
-              An unforgettable 2-night celebration of rhythm, royal Gujarati culture, live music, and timeless Navratri heritage in Nashik.
+            <p className="text-xs text-ivory-200/80 leading-relaxed max-w-sm mb-3">
+              Presented by <strong>Event Circle</strong> & <strong>FestHaus Productions</strong>. An unforgettable 2-night celebration of rhythm, royal Gujarati culture, live music, and timeless Navratri heritage in Nashik.
             </p>
 
             <div className="flex items-center gap-3">
@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-ivory-200/60 gap-4">
-          <p>© 2026 Garba Ni Raat. All rights reserved.</p>
+          <p>© 2026 Garba Ni Raat. Presented by Event Circle & FestHaus Productions.</p>
           <p className="flex items-center gap-1">
             <span>Designed with</span>
             <Heart className="w-3.5 h-3.5 text-maroon-500 fill-maroon-500" />
