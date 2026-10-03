@@ -31,9 +31,9 @@ export const EVENT_INFO = {
   colorfulLogo: '/assets/brand/garba-ni-raat-colorful-logo.png',
   ticketPartner: 'Fizmaa',
   fizmaaLogo: '/assets/brand/fizmaa-logo.png',
-  fizmaaTicketUrl: 'https://live.fizmaa.com/event.html?id=110',
-  fizmaaLegacyUrl: 'https://live.fizmaa.com/event.html?id=110',
-  fizmaaDemocracyUrl: 'https://live.fizmaa.com/event.html?id=111',
+  fizmaaTicketUrl: 'https://live.fizmaa.com/event.html?id=111',
+  fizmaaLegacyUrl: 'https://live.fizmaa.com/event.html?id=111',
+  fizmaaDemocracyUrl: 'https://live.fizmaa.com/event.html?id=110',
   coverPassWhatsappUrl: 'https://wa.me/918554018129?text=Hello%20Team%20Garba%20Ni%20Raat!%20I%20would%20like%20to%20book%20and%20reserve%20the%20exclusive%20Cover%20Pass%20for%20the%20event.%20Please%20share%20the%20booking%20details.',
 };
 
@@ -210,7 +210,7 @@ export const PARTNERS_DATA = {
     name: 'Fizmaa',
     role: 'EXCLUSIVE OFFICIAL TICKETING PARTNER',
     logo: '/assets/brand/fizmaa-logo.png',
-    url: 'https://live.fizmaa.com/event.html?id=110'
+    url: 'https://live.fizmaa.com/event.html?id=111'
   },
 
   foodAndLifestyle: [
