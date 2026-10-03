@@ -126,7 +126,7 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
                         <div>
                           <div className="flex items-center gap-2">
                             {(opt.type === 'Single' || opt.type === 'General') && <span className="text-gold-400 text-xs font-semibold">1x</span>}
-                            {opt.type === 'Couple' && <Heart className="w-3.5 h-3.5 text-maroon-400" />}
+                            {(opt.type === 'Couple' || opt.type === 'Double') && <Heart className="w-3.5 h-3.5 text-maroon-400" />}
                             {(opt.type === 'SPAX' || opt.type === 'Group') && <Users className="w-3.5 h-3.5 text-gold-300" />}
                             <span className="text-xs sm:text-sm font-semibold text-ivory-100 uppercase tracking-wide">
                               {opt.type}

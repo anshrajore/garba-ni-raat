@@ -46,14 +46,14 @@ export const TICKET_TIERS: TicketTier[] = [
     theme: 'maroon',
     features: [
       'Fast-Track VIP & Royal Lounge Entry',
-      '₹800 / ₹1,600 F&B Value Redeemable at Stalls',
+      'Food & Beverage Value Redeemable at Stalls',
       'Complimentary Handcrafted Dandiya Pair',
       'Royal Seating & Refreshment Pavilion Access',
       'Valet Parking & Dedicated Event Concierge'
     ],
     options: [
-      { type: 'Single', price: 1199, description: 'Cover Single (includes ₹800 F&B credit)' },
-      { type: 'Couple', price: 2269, description: 'Cover Couple (includes ₹1,600 F&B credit)' }
+      { type: 'Single', price: 999, description: 'Cover Single (includes F&B credit)' },
+      { type: 'Double', price: 1899, description: 'Cover Double (includes F&B credit)' }
     ]
   },
   {

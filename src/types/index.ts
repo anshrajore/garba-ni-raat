@@ -1,5 +1,5 @@
 export type PassCategory = 'Democracy' | 'Legacy' | 'Cover';
-export type PassType = 'Single' | 'General' | 'Couple' | 'SPAX' | 'Group';
+export type PassType = 'Single' | 'General' | 'Couple' | 'Double' | 'SPAX' | 'Group';
 
 export interface TicketTier {
   category: PassCategory;
