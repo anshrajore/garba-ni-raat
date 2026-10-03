@@ -28,8 +28,10 @@ export const MoreThanGarba: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="h-[1px] w-12 bg-gold-400/60" />
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gold-300">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gold-300 flex items-center gap-2">
+              <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
               A COMPLETE FESTIVE EXPERIENCE
+              <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
             </span>
             <span className="h-[1px] w-12 bg-gold-400/60" />
           </div>
@@ -37,8 +39,8 @@ export const MoreThanGarba: React.FC = () => {
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ivory-100 mb-2">
             MORE THAN JUST GARBA
           </h2>
-          <div className="w-20 h-3 mx-auto opacity-70">
-            <img src="/assets/ornaments/floral-divider.png" alt="" className="w-full h-auto object-contain" />
+          <div className="w-16 h-16 mx-auto my-2">
+            <img src="/assets/ornaments/crossed-dandiya-hd.png" alt="" className="w-full h-auto object-contain" />
           </div>
         </div>
 

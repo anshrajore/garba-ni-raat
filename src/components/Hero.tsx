@@ -22,19 +22,20 @@ export const Hero: React.FC = () => {
         `
       }} />
 
-      {/* Ambient Floating Royal Dupatta & Festive Ornaments */}
-      <div className="absolute -top-6 right-0 w-64 sm:w-96 lg:w-[480px] pointer-events-none opacity-30 sm:opacity-45 z-0 animate-float-slow">
+      {/* Royal Embroidered Dupatta Drape — Top Right Royal Canopy */}
+      <div className="absolute top-0 right-0 w-52 sm:w-80 lg:w-[420px] pointer-events-none z-20 animate-float-slow">
         <img
           src="/assets/ornaments/royal-dupatta-drape.png"
-          alt=""
-          className="w-full h-auto object-contain filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
+          alt="Royal Festive Drape"
+          className="w-full h-auto object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]"
         />
       </div>
 
-      <div className="absolute top-1/4 -left-12 w-40 sm:w-56 pointer-events-none opacity-20 sm:opacity-30 z-0 rotate-[-15deg]">
+      {/* Luxury 3D Crossed Dandiya — Left Accent */}
+      <div className="absolute top-20 sm:top-28 left-2 sm:left-6 w-28 sm:w-40 lg:w-48 pointer-events-none z-20 rotate-[-12deg] filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)]">
         <img
           src="/assets/ornaments/crossed-dandiya-hd.png"
-          alt=""
+          alt="Royal Dandiya"
           className="w-full h-auto object-contain"
         />
       </div>
@@ -45,16 +46,16 @@ export const Hero: React.FC = () => {
       {/* Empty space filler for top balance */}
       <div className="w-full h-8 sm:h-12" />
 
-      {/* Center Core Content Layer (Z-INDEX 2) */}
+      {/* Center Core Content Layer (Z-INDEX 10) */}
       <div className="container-custom relative z-10 max-w-4xl mx-auto flex flex-col items-center px-4">
         
-        {/* Badge Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-400/50 bg-emerald-950/70 backdrop-blur-md mb-6 shadow-gold-subtle">
-          <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
-          <span className="text-[11px] sm:text-xs tracking-[0.2em] uppercase font-semibold text-gold-300">
+        {/* Badge Pill with Glowing Lotus Diya */}
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gold-400/60 bg-emerald-950/85 backdrop-blur-md mb-6 shadow-gold-subtle">
+          <img src="/assets/ornaments/royal-diya-hd.png" alt="Auspicious Diya" className="w-5 h-5 object-contain animate-pulse" />
+          <span className="text-[11px] sm:text-xs tracking-[0.2em] uppercase font-bold text-gold-300">
             THE GRAND ROYAL NAVRATRI CELEBRATION
           </span>
-          <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
+          <img src="/assets/ornaments/royal-diya-hd.png" alt="Auspicious Diya" className="w-5 h-5 object-contain animate-pulse" />
         </div>
 
         {/* Master Logo Wordmark */}

@@ -11,18 +11,35 @@ import { Gallery } from './components/Gallery';
 import { GetInTouch } from './components/GetInTouch';
 import { Footer } from './components/Footer';
 import { AudioPlayer } from './components/AudioPlayer';
+import { TermsModal } from './components/TermsModal';
+import { BookingPopup } from './components/BookingPopup';
 
 export function App() {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
 
   const handleToggleAudio = () => {
     setIsAudioPlaying(!isAudioPlaying);
+  };
+
+  const handleOpenTerms = () => {
+    setIsTermsOpen(true);
+  };
+
+  const handleCloseTerms = () => {
+    setIsTermsOpen(false);
   };
 
   return (
     <div className="min-h-screen bg-emerald-950 text-ivory-100 font-sans selection:bg-gold-500 selection:text-emerald-950">
       {/* Authentic Garba Music Player (with Navbar & Floating Widget controls) */}
       <AudioPlayer isPlaying={isAudioPlaying} onToggle={handleToggleAudio} />
+
+      {/* High-Converting Timed / Scroll Booking Popup */}
+      <BookingPopup />
+
+      {/* Official Terms & Conditions Modal */}
+      <TermsModal isOpen={isTermsOpen} onClose={handleCloseTerms} />
 
       {/* 01 — NAVIGATION */}
       <Navbar
@@ -40,7 +57,7 @@ export function App() {
       <EventDetails />
 
       {/* 05 — CHOOSE YOUR EXPERIENCE (Cover Pass First) */}
-      <ChooseExperience />
+      <ChooseExperience onOpenTerms={handleOpenTerms} />
 
       {/* 06 — VENUE & LOCATION */}
       <VenueLocation />
@@ -58,7 +75,7 @@ export function App() {
       <GetInTouch />
 
       {/* 11 — FOOTER */}
-      <Footer />
+      <Footer onOpenTerms={handleOpenTerms} />
     </div>
   );
 }

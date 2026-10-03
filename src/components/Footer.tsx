@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { ArrowRight, Heart, Instagram, MessageCircle } from 'lucide-react';
 import { EVENT_INFO } from '../data/eventData';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenTerms?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -30,7 +34,7 @@ export const Footer: React.FC = () => {
               className="h-16 w-auto object-contain mb-4 filter drop-shadow-[0_2px_10px_rgba(217,164,65,0.3)]"
             />
             <p className="text-xs text-ivory-200/80 leading-relaxed max-w-sm mb-3">
-              Presented by <strong>Event Circle</strong> & <strong>FestHaus Productions</strong>. An unforgettable 2-night celebration of rhythm, royal Gujarati culture, live music, and timeless Navratri heritage in Nashik.
+              Presented by <strong>Event Circle</strong>, <strong>FestHaus Productions</strong> & <strong>Eventverse Studio</strong>. An unforgettable 2-night celebration of rhythm, royal Gujarati culture, live music, and timeless Navratri heritage in Nashik.
             </p>
 
             <div className="flex items-center gap-3">
@@ -77,10 +81,38 @@ export const Footer: React.FC = () => {
               LEGAL
             </span>
             <ul className="space-y-2 text-xs text-ivory-200/80">
-              <li><a href="#choose-experience" className="hover:text-gold-300 transition-colors">Terms & Conditions</a></li>
-              <li><a href="#choose-experience" className="hover:text-gold-300 transition-colors">Privacy Policy</a></li>
-              <li><a href="#choose-experience" className="hover:text-gold-300 transition-colors">Refund & Cancellation</a></li>
-              <li><a href="#choose-experience" className="hover:text-gold-300 transition-colors">Safety Guidelines</a></li>
+              <li>
+                <button
+                  onClick={() => onOpenTerms?.()}
+                  className="hover:text-gold-300 transition-colors text-left"
+                >
+                  Terms & Conditions
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenTerms?.()}
+                  className="hover:text-gold-300 transition-colors text-left"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenTerms?.()}
+                  className="hover:text-gold-300 transition-colors text-left"
+                >
+                  Refund & Cancellation
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenTerms?.()}
+                  className="hover:text-gold-300 transition-colors text-left"
+                >
+                  Safety Guidelines
+                </button>
+              </li>
             </ul>
           </div>
 

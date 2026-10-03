@@ -2,7 +2,11 @@ import React from 'react';
 import { Check, ArrowRight, Crown, Users, Heart, Sparkles, Flame, ShieldCheck } from 'lucide-react';
 import { TICKET_TIERS, EVENT_INFO } from '../data/eventData';
 
-export const ChooseExperience: React.FC = () => {
+interface ChooseExperienceProps {
+  onOpenTerms?: () => void;
+}
+
+export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms }) => {
   return (
     <section id="choose-experience" className="relative py-24 sm:py-32 bg-emerald-950 text-ivory-100 overflow-hidden">
       
@@ -21,9 +25,13 @@ export const ChooseExperience: React.FC = () => {
 
       <div className="container-custom relative z-10">
         
-        {/* Section Header */}
+        {/* Section Header with Grand Mandala Banner */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="w-48 sm:w-64 mx-auto mb-3">
+            <img src="/assets/ornaments/mandala-header-banner.png" alt="" className="w-full h-auto object-contain" />
+          </div>
+
+          <div className="flex items-center justify-center gap-3 mb-2">
             <span className="h-[1px] w-12 bg-gold-400/60" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-gold-300 flex items-center gap-2">
               <img src="/assets/ornaments/royal-diya-hd.png" alt="" className="w-4 h-4 object-contain" />
@@ -33,17 +41,13 @@ export const ChooseExperience: React.FC = () => {
             <span className="h-[1px] w-12 bg-gold-400/60" />
           </div>
           
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ivory-100 mb-3">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ivory-100 mb-2">
             CHOOSE YOUR EXPERIENCE
           </h2>
           
           <p className="text-xs sm:text-sm md:text-base tracking-[0.16em] uppercase font-medium text-gold-200/90 max-w-xl mx-auto">
             DIFFERENT PASSES. SAME UNFORGETTABLE ENERGY.
           </p>
-
-          <div className="w-24 h-4 mx-auto mt-4 opacity-75">
-            <img src="/assets/ornaments/floral-divider.png" alt="" className="w-full h-auto object-contain" />
-          </div>
         </div>
 
         {/* 3 Master Pricing Tier Cards - COVER PASS FIRST & ELEVATED FOR CONVERSION */}
@@ -61,9 +65,16 @@ export const ChooseExperience: React.FC = () => {
                     : 'bg-emerald-900/70 border border-gold-500/40 shadow-xl z-10'
                 } p-7 sm:p-8 corner-decor`}
               >
+                {/* Royal Dupatta Drape on Cover Pass Card */}
+                {isFeatured && (
+                  <div className="absolute -top-6 -right-6 w-32 sm:w-36 pointer-events-none z-30 filter drop-shadow-md">
+                    <img src="/assets/ornaments/royal-dupatta-drape.png" alt="" className="w-full h-auto object-contain" />
+                  </div>
+                )}
+
                 {/* Popular Crown Badge for Cover Pass */}
                 {isFeatured ? (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-emerald-950 text-[11px] font-bold tracking-widest uppercase flex items-center gap-1.5 shadow-gold-glow border border-gold-100 whitespace-nowrap">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-emerald-950 text-[11px] font-bold tracking-widest uppercase flex items-center gap-1.5 shadow-gold-glow border border-gold-100 whitespace-nowrap z-40">
                     <Crown className="w-3.5 h-3.5" />
                     #1 MOST POPULAR • F&B INCLUDED
                   </div>
@@ -76,7 +87,7 @@ export const ChooseExperience: React.FC = () => {
 
                 <div>
                   {/* Category Title */}
-                  <div className="text-center pb-6 border-b border-gold-500/20">
+                  <div className="text-center pb-6 border-b border-gold-500/20 relative">
                     <span className="text-xs uppercase font-mono tracking-[0.25em] text-gold-300 font-semibold block mb-1">
                       {tier.category === 'Cover' ? 'F&B ALL-INCLUSIVE' : tier.category === 'Legacy' ? 'ROYAL VIP ACCESS' : 'STANDARD ENTRY'}
                     </span>
@@ -160,7 +171,45 @@ export const ChooseExperience: React.FC = () => {
 
         </div>
 
+        {/* Official Terms & Conditions Quick Notice Card */}
+        <div className="mt-14 max-w-4xl mx-auto rounded-2xl bg-emerald-900/50 border border-gold-500/30 p-6 sm:p-7 backdrop-blur-md">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-gold-500/20">
+            <div className="flex items-center gap-2.5">
+              <ShieldCheck className="w-5 h-5 text-gold-400" />
+              <h4 className="font-serif text-lg font-bold text-ivory-100">
+                Official Pass Rules & Guidelines
+              </h4>
+            </div>
+            <button
+              onClick={() => onOpenTerms?.()}
+              className="text-xs font-mono font-bold text-gold-300 hover:text-white uppercase tracking-wider underline flex items-center gap-1"
+            >
+              View Full Terms & Conditions →
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-xs text-ivory-200/80 leading-relaxed">
+            <div className="flex items-start gap-2">
+              <span className="text-gold-400 font-bold">•</span>
+              <span><strong>Venue Specific:</strong> Legacy Pass valid only at Legacy Lawns (19 Oct); Democracy Pass valid only at Democracy Lawns (20 Oct).</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-gold-400 font-bold">•</span>
+              <span><strong>Admissions:</strong> Single (1 Person), Couple (2 Persons), SPAX (Up to 5 Persons).</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-gold-400 font-bold">•</span>
+              <span><strong>Inclusions:</strong> Standard passes do not include F&B/refreshments. Cover Pass includes ₹800 / ₹1,600 F&B stall credit.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-gold-400 font-bold">•</span>
+              <span><strong>Policy:</strong> All passes are strictly non-transferable and non-refundable. Valid photo ID & security checks required.</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
 };
+

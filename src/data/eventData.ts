@@ -276,3 +276,15 @@ export const GALLERY_PHOTOS = [
     desc: 'Euphoric winners from the grand season finale'
   }
 ];
+
+export const TERMS_AND_CONDITIONS = [
+  'Pass valid only for the selected venue: Democracy or Legacy.',
+  'Legacy Pass valid only at Legacy; Democracy Pass valid only at Democracy.',
+  'Available categories: Single, Couple & SPAX, as applicable.',
+  'No food, beverages, Dandiya, refreshments, merchandise or complimentary items are included (unless explicitly specified with Cover Pass).',
+  'Couple Pass admits 2 persons; SPAX Pass admits up to 5 persons.',
+  'Passes are non-transferable and non-refundable.',
+  'Valid pass required for entry. Venue rules & security checks apply.',
+  'Organisers reserve the right to modify event arrangements when necessary.'
+];
+
