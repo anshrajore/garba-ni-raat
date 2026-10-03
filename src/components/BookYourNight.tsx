@@ -103,7 +103,7 @@ export const BookYourNight: React.FC = () => {
             <div className="relative z-10 pt-4 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
               <span className="text-[11px] text-ivory-200/70">Tickets exclusively on Fizmaa</span>
               <a
-                href={EVENT_INFO.fizmaaTicketUrl}
+                href={EVENT_INFO.fizmaaLegacyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gold-gradient text-emerald-950 font-sans font-bold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"
@@ -174,7 +174,7 @@ export const BookYourNight: React.FC = () => {
             <div className="relative z-10 pt-4 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
               <span className="text-[11px] text-ivory-200/70">Tickets exclusively on Fizmaa</span>
               <a
-                href={EVENT_INFO.fizmaaTicketUrl}
+                href={EVENT_INFO.fizmaaDemocracyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#F3CC78] via-[#E8B95B] to-[#D9A441] text-maroon-950 font-sans font-bold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"

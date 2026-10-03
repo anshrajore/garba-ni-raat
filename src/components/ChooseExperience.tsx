@@ -1,12 +1,18 @@
 import React from 'react';
-import { ArrowRight, Crown, Users, Heart, Sparkles, Flame, ShieldCheck } from 'lucide-react';
-import { TICKET_TIERS, EVENT_INFO } from '../data/eventData';
+import { ArrowRight, Crown, Users, Heart, Sparkles, Flame, ShieldCheck, MessageCircle } from 'lucide-react';
+import { TICKET_TIERS, EVENT_INFO, TERMS_AND_CONDITIONS } from '../data/eventData';
 
 interface ChooseExperienceProps {
   onOpenTerms?: () => void;
 }
 
 export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms }) => {
+  const getTicketUrl = (category: string) => {
+    if (category === 'Cover') return EVENT_INFO.coverPassWhatsappUrl;
+    if (category === 'Legacy') return EVENT_INFO.fizmaaLegacyUrl;
+    return EVENT_INFO.fizmaaDemocracyUrl;
+  };
+
   return (
     <section id="choose-experience" className="relative py-24 sm:py-32 bg-emerald-950 text-ivory-100 overflow-hidden">
       
@@ -53,8 +59,10 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
         {/* 3 Master Pricing Tier Cards - COVER PASS FIRST & ELEVATED FOR CONVERSION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
           
-          {TICKET_TIERS.map((tier, idx) => {
+          {TICKET_TIERS.map((tier) => {
             const isFeatured = tier.isPopular; // Cover Pass is index 0 and isPopular = true
+            const isCover = tier.category === 'Cover';
+            const actionUrl = getTicketUrl(tier.category);
 
             return (
               <div
@@ -76,20 +84,25 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
                 {isFeatured ? (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-emerald-950 text-[11px] font-bold tracking-widest uppercase flex items-center gap-1.5 shadow-gold-glow border border-gold-100 whitespace-nowrap z-40">
                     <Crown className="w-3.5 h-3.5" />
-                    #1 MOST POPULAR • F&B INCLUDED
+                    #1 MOST POPULAR • VIP PASS
                   </div>
                 ) : tier.category === 'Legacy' ? (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-emerald-950 border border-gold-400 text-gold-300 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
                     <Flame className="w-3 h-3 text-gold-400" />
-                    ROYAL VIP PASS
+                    19 OCT • LEGACY VENUE
                   </div>
-                ) : null}
+                ) : (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-emerald-950 border border-gold-400 text-gold-300 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
+                    <Flame className="w-3 h-3 text-gold-400" />
+                    20 OCT • DEMOCRACY VENUE
+                  </div>
+                )}
 
                 <div>
                   {/* Category Title */}
                   <div className="text-center pb-6 border-b border-gold-500/20 relative">
                     <span className="text-xs uppercase font-mono tracking-[0.25em] text-gold-300 font-semibold block mb-1">
-                      {tier.category === 'Cover' ? 'F&B ALL-INCLUSIVE' : tier.category === 'Legacy' ? 'ROYAL VIP ACCESS' : 'STANDARD ENTRY'}
+                      {tier.category === 'Cover' ? 'VIP ALL-ACCESS' : tier.category === 'Legacy' ? 'ROYAL ENTRY (19 OCT)' : 'GRAND ENTRY (20 OCT)'}
                     </span>
                     <h3 className="font-serif text-3xl font-bold text-ivory-100 tracking-wider">
                       {tier.category} PASS
@@ -133,20 +146,29 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
                   </div>
                 </div>
 
-                {/* Direct Book on Fizmaa Button */}
+                {/* Booking Button — WhatsApp for Cover, Fizmaa for Legacy & Democracy */}
                 <div className="pt-6 mt-4 border-t border-gold-500/20">
                   <a
-                    href={EVENT_INFO.fizmaaTicketUrl}
+                    href={actionUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-full py-3.5 rounded-xl font-sans font-bold text-xs uppercase tracking-[0.16em] flex items-center justify-center gap-2 transition-all duration-300 ${
-                      isFeatured
+                      isCover
                         ? 'bg-gold-gradient text-emerald-950 shadow-gold-glow hover:scale-[1.03] border border-gold-100'
                         : 'border border-gold-400/70 text-gold-200 hover:bg-gold-500 hover:text-emerald-950 hover:shadow-gold-subtle'
                     }`}
                   >
-                    <span>BOOK {tier.category} PASS ON FIZMAA</span>
-                    <ArrowRight className="w-4 h-4" />
+                    {isCover ? (
+                      <>
+                        <MessageCircle className="w-4 h-4" />
+                        <span>BOOK COVER PASS VIA WHATSAPP</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>BOOK {tier.category} PASS ON FIZMAA</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </>
+                    )}
                   </a>
                 </div>
 
@@ -156,7 +178,7 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
 
         </div>
 
-        {/* Official Terms & Conditions Quick Notice Card */}
+        {/* Official Pass Rules & Guidelines Card — Exact 8 Points */}
         <div className="mt-14 max-w-4xl mx-auto rounded-2xl bg-emerald-900/50 border border-gold-500/30 p-6 sm:p-7 backdrop-blur-md">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-gold-500/20">
             <div className="flex items-center gap-2.5">
@@ -169,27 +191,17 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
               onClick={() => onOpenTerms?.()}
               className="text-xs font-mono font-bold text-gold-300 hover:text-white uppercase tracking-wider underline flex items-center gap-1"
             >
-              View Full Terms & Conditions →
+              View Terms & Conditions Modal →
             </button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-xs text-ivory-200/80 leading-relaxed">
-            <div className="flex items-start gap-2">
-              <span className="text-gold-400 font-bold">•</span>
-              <span><strong>Venue Specific:</strong> Legacy Pass valid only at Legacy Lawns (19 Oct); Democracy Pass valid only at Democracy Lawns (20 Oct).</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-gold-400 font-bold">•</span>
-              <span><strong>Admissions:</strong> Single (1 Person), Couple (2 Persons), SPAX (Up to 5 Persons).</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-gold-400 font-bold">•</span>
-              <span><strong>Inclusions:</strong> Standard passes do not include F&B/refreshments. Cover Pass includes ₹800 / ₹1,600 F&B stall credit.</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-gold-400 font-bold">•</span>
-              <span><strong>Policy:</strong> All passes are strictly non-transferable and non-refundable. Valid photo ID & security checks required.</span>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-4 text-xs text-ivory-200/90 leading-relaxed">
+            {TERMS_AND_CONDITIONS.map((term, idx) => (
+              <div key={idx} className="flex items-start gap-2.5">
+                <span className="text-gold-400 font-bold shrink-0">•</span>
+                <span>{term}</span>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -197,4 +209,5 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
     </section>
   );
 };
+
 

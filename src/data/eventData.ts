@@ -29,10 +29,12 @@ export const EVENT_INFO = {
   instagramUrl: 'https://www.instagram.com/garbaniraat_/',
   instagramHandle: '@garbaniraat_',
   colorfulLogo: '/assets/brand/garba-ni-raat-colorful-logo.png',
-  time: '7:00 PM – 1:00 AM (Both Nights)',
   ticketPartner: 'Fizmaa',
   fizmaaLogo: '/assets/brand/fizmaa-logo.png',
   fizmaaTicketUrl: 'https://live.fizmaa.com/event.html?id=92',
+  fizmaaLegacyUrl: 'https://live.fizmaa.com/event.html?id=92',
+  fizmaaDemocracyUrl: 'https://live.fizmaa.com/event.html?id=111',
+  coverPassWhatsappUrl: 'https://wa.me/918554018129?text=Hello%20Team%20Garba%20Ni%20Raat!%20I%20would%20like%20to%20book%20and%20reserve%20the%20exclusive%20Cover%20Pass%20for%20the%20event.%20Please%20share%20the%20booking%20details.',
 };
 
 // COVER PASS FIRST for maximum sales conversion
@@ -281,7 +283,7 @@ export const TERMS_AND_CONDITIONS = [
   'Pass valid only for the selected venue: Democracy or Legacy.',
   'Legacy Pass valid only at Legacy; Democracy Pass valid only at Democracy.',
   'Available categories: Single, Couple & SPAX, as applicable.',
-  'No food, beverages, Dandiya, refreshments, merchandise or complimentary items are included (unless explicitly specified with Cover Pass).',
+  'No food, beverages, Dandiya, refreshments, merchandise or complimentary items are included.',
   'Couple Pass admits 2 persons; SPAX Pass admits up to 5 persons.',
   'Passes are non-transferable and non-refundable.',
   'Valid pass required for entry. Venue rules & security checks apply.',
