@@ -58,7 +58,7 @@ export const TICKET_TIERS: TicketTier[] = [
   },
   {
     category: 'Legacy',
-    tagline: 'The royal festive experience with priority VIP fast-track access',
+    tagline: 'The royal festive experience with priority VIP fast-track access (19 Oct)',
     theme: 'emerald',
     features: [
       'Priority VIP Fast-Track Gate Entry',
@@ -68,14 +68,14 @@ export const TICKET_TIERS: TicketTier[] = [
       'Dedicated Cultural Photo-booth Access'
     ],
     options: [
-      { type: 'Single', price: 599, description: 'Individual VIP entry pass' },
-      { type: 'Couple', price: 1149, description: 'VIP entry for 1 Couple' },
-      { type: 'SPAX', price: 2799, description: 'VIP Group Pass for up to 5 members' }
+      { type: 'General', price: 649, description: 'Individual entry pass' },
+      { type: 'Couple', price: 1249, description: 'Entry for 1 Couple (2 persons)' },
+      { type: 'Group', price: 3199, description: 'VIP Group / SPAX Pass for up to 5 persons' }
     ]
   },
   {
     category: 'Democracy',
-    tagline: 'Pure energetic celebration for every Garba enthusiast',
+    tagline: 'Pure energetic celebration for every Garba enthusiast (20 Oct)',
     theme: 'emerald',
     features: [
       'Full Arena Entry Access',
@@ -85,9 +85,9 @@ export const TICKET_TIERS: TicketTier[] = [
       'High-Energy Live Band & Dhol Performances'
     ],
     options: [
-      { type: 'Single', price: 399, description: 'Individual entry pass' },
-      { type: 'Couple', price: 749, description: '1 Female + 1 Male entry pass' },
-      { type: 'SPAX', price: 1799, description: 'Group Pass for up to 5 members' }
+      { type: 'General', price: 449, description: 'Individual entry pass' },
+      { type: 'Couple', price: 850, description: 'Entry for 1 Couple (2 persons)' },
+      { type: 'Group', price: 2199, description: 'Group / SPAX Pass for up to 5 persons' }
     ]
   }
 ];

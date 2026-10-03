@@ -70,7 +70,7 @@ export const BookingPopup: React.FC = () => {
         </div>
 
         <p className="text-[11px] text-ivory-200/80 mb-3 leading-snug">
-          Official passes starting at <strong className="text-gold-300 font-bold">₹399</strong>. Select your night below:
+          Official passes starting at <strong className="text-gold-300 font-bold">₹449</strong>. Select your night below:
         </p>
 
         {/* Dual CTA Buttons for 19 Oct & 20 Oct */}
