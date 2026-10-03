@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ArrowRight, Crown, Users, Heart, Sparkles, Flame, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Crown, Users, Heart, Sparkles, Flame, ShieldCheck } from 'lucide-react';
 import { TICKET_TIERS, EVENT_INFO } from '../data/eventData';
 
 interface ChooseExperienceProps {
@@ -130,21 +130,6 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
                         </div>
                       </div>
                     ))}
-                  </div>
-
-                  {/* Features List */}
-                  <div className="py-4 border-t border-gold-500/20">
-                    <span className="text-[11px] uppercase tracking-[0.15em] font-semibold text-gold-300/90 block mb-3">
-                      INCLUDED IN PASS:
-                    </span>
-                    <ul className="space-y-2.5">
-                      {tier.features.map((feature, fIdx) => (
-                        <li key={fIdx} className="flex items-start gap-2.5 text-xs text-ivory-200/90 leading-relaxed">
-                          <Check className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
 
