@@ -26,6 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isAudioPlaying, toggleAudio }) =
     { name: 'Venues', href: '#venue' },
     { name: 'Partners', href: '#sponsors' },
     { name: 'Gallery', href: '#gallery' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
 

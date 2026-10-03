@@ -14,6 +14,7 @@ import { Footer } from './components/Footer';
 import { AudioPlayer } from './components/AudioPlayer';
 import { TermsModal } from './components/TermsModal';
 import { BookingPopup } from './components/BookingPopup';
+import { FAQ } from './components/FAQ';
 
 export function App() {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -72,10 +73,13 @@ export function App() {
       {/* 09 — THE GARBA MOMENTS / GALLERY */}
       <Gallery />
 
-      {/* 10 — GET IN TOUCH */}
+      {/* 10 — FAQ (SEO RICH SNIPPETS) */}
+      <FAQ />
+
+      {/* 11 — GET IN TOUCH */}
       <GetInTouch />
 
-      {/* 11 — FOOTER */}
+      {/* 12 — FOOTER */}
       <Footer onOpenTerms={handleOpenTerms} />
 
       {/* Vercel Analytics */}

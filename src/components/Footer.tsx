@@ -72,6 +72,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
               <li><a href="#venue" className="hover:text-gold-300 transition-colors">Venues</a></li>
               <li><a href="#sponsors" className="hover:text-gold-300 transition-colors">Partners</a></li>
               <li><a href="#gallery" className="hover:text-gold-300 transition-colors">Gallery</a></li>
+              <li><a href="#faq" className="hover:text-gold-300 transition-colors">FAQ</a></li>
+              <li><a href="#contact" className="hover:text-gold-300 transition-colors">Contact</a></li>
             </ul>
           </div>
 
