@@ -69,7 +69,7 @@ export const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose }) => {
             href={EVENT_INFO.fizmaaTicketUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gold-gradient text-emerald-950 font-bold text-xs uppercase tracking-wider shadow-gold-subtle hover:scale-105 transition-all text-center"
+            className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gold-gradient text-black font-extrabold text-xs uppercase tracking-wider shadow-gold-subtle hover:scale-105 transition-all text-center"
           >
             Agree & Book Passes →
           </a>

@@ -95,10 +95,10 @@ export const Hero: React.FC = () => {
             href={EVENT_INFO.fizmaaTicketUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto min-w-[200px] inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-gold-gradient text-emerald-950 font-sans font-bold text-xs sm:text-sm tracking-[0.15em] uppercase shadow-gold-glow hover:shadow-[0_0_35px_rgba(217,164,65,0.6)] transition-all duration-300 hover:scale-[1.04] active:scale-[0.98] border border-gold-200"
+            className="w-full sm:w-auto min-w-[200px] inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-gold-gradient text-black font-sans font-extrabold text-xs sm:text-sm tracking-[0.15em] uppercase shadow-gold-glow hover:shadow-[0_0_35px_rgba(217,164,65,0.6)] transition-all duration-300 hover:scale-[1.04] active:scale-[0.98] border border-gold-200"
           >
             <span>BOOK TICKETS</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
           </a>
 
           <a

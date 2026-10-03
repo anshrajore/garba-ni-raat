@@ -106,10 +106,10 @@ export const BookYourNight: React.FC = () => {
                 href={EVENT_INFO.fizmaaLegacyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gold-gradient text-emerald-950 font-sans font-bold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gold-gradient text-black font-sans font-extrabold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"
               >
                 <span>BOOK DAY 1 PASS</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
               </a>
             </div>
           </div>
@@ -177,10 +177,10 @@ export const BookYourNight: React.FC = () => {
                 href={EVENT_INFO.fizmaaDemocracyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#F3CC78] via-[#E8B95B] to-[#D9A441] text-maroon-950 font-sans font-bold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gold-gradient text-black font-sans font-extrabold text-xs uppercase tracking-[0.14em] shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-105 border border-gold-300"
               >
                 <span>BOOK DAY 2 PASS</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
               </a>
             </div>
           </div>

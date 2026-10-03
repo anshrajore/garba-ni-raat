@@ -226,11 +226,11 @@ export const Sponsors: React.FC = () => {
             href={`https://wa.me/${EVENT_INFO.whatsappNumber}?text=Hello%20Team%20Garba%20Ni%20Raat!%20I%20would%20like%20to%20inquire%20about%20Sponsorship%20and%20Brand%20Partnership%20opportunities.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gold-gradient text-emerald-950 font-sans font-bold text-xs uppercase tracking-wider shadow-gold-subtle hover:scale-105 transition-all shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gold-gradient text-black font-sans font-extrabold text-xs uppercase tracking-wider shadow-gold-subtle hover:scale-105 transition-all shrink-0"
           >
-            <MessageCircle className="w-4 h-4" />
+            <MessageCircle className="w-4 h-4 text-black" />
             <span>Become a Partner</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
           </a>
         </div>
 

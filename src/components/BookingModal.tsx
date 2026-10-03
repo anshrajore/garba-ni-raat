@@ -83,7 +83,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     onClick={() => setSelectedDay(d.id as any)}
                     className={`p-3 rounded-xl border text-center transition-all ${
                       selectedDay === d.id
-                        ? 'bg-gold-gradient text-emerald-950 border-gold-200 font-bold shadow-gold-subtle'
+                        ? 'bg-gold-gradient text-black border-gold-200 font-extrabold shadow-gold-subtle'
                         : 'bg-emerald-950/60 border-gold-500/30 text-ivory-200 hover:border-gold-400'
                     }`}
                   >
@@ -113,7 +113,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       selectedCategory === tier.category
                         ? tier.category === 'Legacy'
                           ? 'bg-gradient-to-r from-maroon-800 to-maroon-900 border-gold-300 text-ivory-100 shadow-gold-subtle font-bold'
-                          : 'bg-gold-gradient text-emerald-950 border-gold-200 font-bold shadow-gold-subtle'
+                          : 'bg-gold-gradient text-black border-gold-200 font-extrabold shadow-gold-subtle'
                         : 'bg-emerald-950/60 border-gold-500/30 text-ivory-200 hover:border-gold-400'
                     }`}
                   >
@@ -197,7 +197,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
                 <button
                   onClick={handleCheckout}
-                  className="w-1/2 sm:w-auto px-6 py-3 rounded-xl bg-gold-gradient text-emerald-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-gold-glow hover:scale-105 transition-all border border-gold-200"
+                  className="w-1/2 sm:w-auto px-6 py-3 rounded-xl bg-gold-gradient text-black font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-gold-glow hover:scale-105 transition-all border border-gold-200"
                 >
                   <span>CONFIRM & BOOK</span>
                   <ArrowRight className="w-4 h-4" />

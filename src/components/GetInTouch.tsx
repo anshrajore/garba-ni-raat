@@ -40,16 +40,16 @@ export const GetInTouch: React.FC = () => {
             {/* Phone */}
             <a
               href={`tel:${EVENT_INFO.phone.replace(/\s+/g, '')}`}
-              className="flex items-center gap-4 p-5 rounded-xl bg-white/80 border border-[#D9A441]/40 hover:border-[#D9A441] shadow-sm hover:shadow-md transition-all group"
+              className="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl bg-white/80 border border-[#D9A441]/40 hover:border-[#D9A441] shadow-sm hover:shadow-md transition-all group overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-xl bg-emerald-900 text-gold-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                <Phone className="w-5 h-5" />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-900 text-gold-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <span className="text-[10px] uppercase font-mono tracking-widest text-[#8A5A1A] font-bold block">
                   OFFICIAL HELPLINE
                 </span>
-                <span className="font-serif text-lg font-bold text-[#2B1B10]">
+                <span className="font-serif text-base sm:text-lg font-bold text-[#2B1B10] block truncate">
                   {EVENT_INFO.phoneDisplay}
                 </span>
               </div>
@@ -58,16 +58,16 @@ export const GetInTouch: React.FC = () => {
             {/* Email */}
             <a
               href={`mailto:${EVENT_INFO.email}`}
-              className="flex items-center gap-4 p-5 rounded-xl bg-white/80 border border-[#D9A441]/40 hover:border-[#D9A441] shadow-sm hover:shadow-md transition-all group"
+              className="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl bg-white/80 border border-[#D9A441]/40 hover:border-[#D9A441] shadow-sm hover:shadow-md transition-all group overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-xl bg-emerald-900 text-gold-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                <Mail className="w-5 h-5" />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-900 text-gold-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <span className="text-[10px] uppercase font-mono tracking-widest text-[#8A5A1A] font-bold block">
                   DIRECT EMAIL
                 </span>
-                <span className="font-serif text-base sm:text-lg font-bold text-[#2B1B10]">
+                <span className="font-sans sm:font-serif text-[13px] sm:text-base md:text-lg font-bold text-[#2B1B10] block break-all sm:break-normal">
                   {EVENT_INFO.email}
                 </span>
               </div>
@@ -78,16 +78,16 @@ export const GetInTouch: React.FC = () => {
               href={EVENT_INFO.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 rounded-xl bg-white/80 border border-[#D9A441]/40 hover:border-[#D9A441] shadow-sm hover:shadow-md transition-all group"
+              className="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl bg-white/80 border border-[#D9A441]/40 hover:border-[#D9A441] shadow-sm hover:shadow-md transition-all group overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-md">
-                <MessageCircle className="w-5 h-5" />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-md">
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <span className="text-[10px] uppercase font-mono tracking-widest text-[#8A5A1A] font-bold block">
                   WHATSAPP ASSIST & INQUIRIES
                 </span>
-                <span className="font-serif text-lg font-bold text-[#2B1B10]">
+                <span className="font-serif text-base sm:text-lg font-bold text-[#2B1B10] block truncate">
                   {EVENT_INFO.phoneDisplay}
                 </span>
               </div>

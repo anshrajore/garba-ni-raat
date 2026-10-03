@@ -71,11 +71,11 @@ export const VenueLocation: React.FC = () => {
                 href={EVENT_INFO.day1MapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-gold-gradient text-emerald-950 font-sans font-bold text-xs uppercase tracking-wider shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-[1.02] border border-gold-200 text-center"
+                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-gold-gradient text-black font-sans font-extrabold text-xs uppercase tracking-wider shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-[1.02] border border-gold-200 text-center"
               >
-                <Navigation className="w-3.5 h-3.5 shrink-0" />
+                <Navigation className="w-3.5 h-3.5 shrink-0 text-black stroke-[2.5]" />
                 <span>GET DIRECTIONS TO LEGACY</span>
-                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 text-black stroke-[2.5]" />
               </a>
             </div>
           </div>
@@ -119,11 +119,11 @@ export const VenueLocation: React.FC = () => {
                 href={EVENT_INFO.day2MapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#F3CC78] via-[#E8B95B] to-[#D9A441] text-maroon-950 font-sans font-bold text-xs uppercase tracking-wider shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-[1.02] border border-gold-200 text-center"
+                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-gold-gradient text-black font-sans font-extrabold text-xs uppercase tracking-wider shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-[1.02] border border-gold-200 text-center"
               >
-                <Navigation className="w-3.5 h-3.5 shrink-0" />
+                <Navigation className="w-3.5 h-3.5 shrink-0 text-black stroke-[2.5]" />
                 <span>GET DIRECTIONS TO DEMOCRACY</span>
-                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 text-black stroke-[2.5]" />
               </a>
             </div>
           </div>

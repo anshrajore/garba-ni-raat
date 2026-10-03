@@ -82,8 +82,8 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
 
                 {/* Popular Crown Badge for Cover Pass */}
                 {isFeatured ? (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-emerald-950 text-[11px] font-bold tracking-widest uppercase flex items-center gap-1.5 shadow-gold-glow border border-gold-100 whitespace-nowrap z-40">
-                    <Crown className="w-3.5 h-3.5" />
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-black text-[11px] font-extrabold tracking-widest uppercase flex items-center gap-1.5 shadow-gold-glow border border-gold-100 whitespace-nowrap z-40">
+                    <Crown className="w-3.5 h-3.5 text-black stroke-[2.5]" />
                     #1 MOST POPULAR • VIP PASS
                   </div>
                 ) : tier.category === 'Legacy' ? (
@@ -152,21 +152,21 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
                     href={actionUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full py-3.5 px-4 rounded-xl font-sans font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 text-center ${
+                    className={`w-full py-3.5 px-4 rounded-xl font-sans font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 text-center ${
                       isCover
-                        ? 'bg-gold-gradient text-emerald-950 shadow-gold-glow hover:scale-[1.03] border border-gold-100'
-                        : 'border border-gold-400/70 text-gold-200 hover:bg-gold-500 hover:text-emerald-950 hover:shadow-gold-subtle'
+                        ? 'bg-gold-gradient text-black shadow-gold-glow hover:scale-[1.03] border border-gold-100'
+                        : 'border border-gold-400/70 text-gold-200 hover:bg-gold-gradient hover:text-black hover:border-gold-300 hover:shadow-gold-subtle'
                     }`}
                   >
                     {isCover ? (
                       <>
-                        <MessageCircle className="w-4 h-4 shrink-0" />
+                        <MessageCircle className="w-4 h-4 shrink-0 text-black" />
                         <span>WHATSAPP FOR COVER PASS</span>
                       </>
                     ) : (
                       <>
                         <span>BOOK {tier.category.toUpperCase()} PASS ON FIZMAA</span>
-                        <ArrowRight className="w-4 h-4 shrink-0" />
+                        <ArrowRight className="w-4 h-4 shrink-0 stroke-[2.5]" />
                       </>
                     )}
                   </a>

@@ -136,9 +136,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
               />
               <button
                 type="submit"
-                className="px-4 py-2.5 rounded-xl bg-gold-gradient text-emerald-950 font-bold text-xs uppercase hover:scale-105 transition-transform"
+                className="px-4 py-2.5 rounded-xl bg-gold-gradient text-black font-extrabold text-xs uppercase hover:scale-105 transition-transform"
               >
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
               </button>
             </form>
 

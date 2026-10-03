@@ -84,9 +84,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isAudioPlaying, toggleAudio }) =
             href={EVENT_INFO.fizmaaTicketUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gold-gradient text-emerald-950 font-sans font-semibold text-xs tracking-[0.12em] uppercase shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] border border-gold-300"
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gold-gradient text-black font-sans font-extrabold text-xs tracking-[0.12em] uppercase shadow-gold-subtle hover:shadow-gold-glow transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] border border-gold-300"
           >
-            <Ticket className="w-3.5 h-3.5" />
+            <Ticket className="w-3.5 h-3.5 text-black stroke-[2.5]" />
             <span>BOOK TICKETS</span>
           </a>
 
@@ -121,10 +121,10 @@ export const Navbar: React.FC<NavbarProps> = ({ isAudioPlaying, toggleAudio }) =
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-gold-gradient text-emerald-950 font-bold text-xs uppercase tracking-widest shadow-gold-subtle border border-gold-300"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-gold-gradient text-black font-extrabold text-xs uppercase tracking-widest shadow-gold-subtle border border-gold-300"
               >
-                <Sparkles className="w-4 h-4" />
-                BOOK TICKETS ON FIZMAA
+                <Sparkles className="w-4 h-4 text-black stroke-[2.5]" />
+                <span>BOOK TICKETS ON FIZMAA</span>
               </a>
             </div>
           </nav>
