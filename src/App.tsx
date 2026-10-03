@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { BookYourNight } from './components/BookYourNight';
@@ -76,6 +77,9 @@ export function App() {
 
       {/* 11 — FOOTER */}
       <Footer onOpenTerms={handleOpenTerms} />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }

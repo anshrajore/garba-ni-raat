@@ -95,11 +95,11 @@ export const BookingPopup: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => sessionStorage.setItem('gnr_booking_popup_dismissed', 'true')}
-            className="inline-flex flex-col items-center justify-center p-2.5 rounded-xl bg-gradient-to-r from-[#F3CC78] via-[#E8B95B] to-[#D9A441] text-maroon-950 font-bold text-center border border-gold-200 shadow-gold-subtle hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="inline-flex flex-col items-center justify-center p-2.5 rounded-xl bg-gold-gradient text-emerald-950 font-bold text-center border border-gold-200 shadow-gold-subtle hover:scale-[1.02] active:scale-[0.98] transition-all"
           >
-            <span className="text-[9px] uppercase font-mono tracking-wider text-maroon-900 opacity-80">DAY 02 • 20 OCT</span>
+            <span className="text-[9px] uppercase font-mono tracking-wider text-emerald-900 opacity-80">DAY 02 • 20 OCT</span>
             <span className="text-[11px] uppercase tracking-wide flex items-center gap-1 font-extrabold">
-              DEMOCRACY <ArrowRight className="w-3 h-3" />
+              DEMOCRACY PASS <ArrowRight className="w-3 h-3" />
             </span>
           </a>
         </div>
