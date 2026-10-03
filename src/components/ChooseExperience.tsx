@@ -152,7 +152,7 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
                     href={actionUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full py-3.5 rounded-xl font-sans font-bold text-xs uppercase tracking-[0.16em] flex items-center justify-center gap-2 transition-all duration-300 ${
+                    className={`w-full py-3.5 px-4 rounded-xl font-sans font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 text-center ${
                       isCover
                         ? 'bg-gold-gradient text-emerald-950 shadow-gold-glow hover:scale-[1.03] border border-gold-100'
                         : 'border border-gold-400/70 text-gold-200 hover:bg-gold-500 hover:text-emerald-950 hover:shadow-gold-subtle'
@@ -160,13 +160,13 @@ export const ChooseExperience: React.FC<ChooseExperienceProps> = ({ onOpenTerms 
                   >
                     {isCover ? (
                       <>
-                        <MessageCircle className="w-4 h-4" />
-                        <span>BOOK COVER PASS VIA WHATSAPP</span>
+                        <MessageCircle className="w-4 h-4 shrink-0" />
+                        <span>WHATSAPP FOR COVER PASS</span>
                       </>
                     ) : (
                       <>
-                        <span>BOOK {tier.category} PASS ON FIZMAA</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <span>BOOK {tier.category.toUpperCase()} PASS ON FIZMAA</span>
+                        <ArrowRight className="w-4 h-4 shrink-0" />
                       </>
                     )}
                   </a>

@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { X, Sparkles, ArrowRight, Ticket, Flame, Clock } from 'lucide-react';
+import { X, ArrowRight, Ticket, Flame } from 'lucide-react';
 import { EVENT_INFO } from '../data/eventData';
 
 export const BookingPopup: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
-    // Check if dismissed in this session
     const isDismissed = sessionStorage.getItem('gnr_booking_popup_dismissed');
     if (isDismissed) return;
 
-    // Timer trigger: show after 7 seconds
+    // Show after 6 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 7000);
+    }, 6000);
 
-    // Scroll trigger: show when scrolled past 30%
+    // Or show after scrolling 25%
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight > 0 && scrollPosition / totalHeight > 0.3) {
+      if (totalHeight > 0 && scrollPosition / totalHeight > 0.25) {
         setIsVisible(true);
       }
     };
@@ -35,65 +33,76 @@ export const BookingPopup: React.FC = () => {
 
   const handleClose = () => {
     setIsVisible(false);
-    setHasInteracted(true);
     sessionStorage.setItem('gnr_booking_popup_dismissed', 'true');
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 max-w-sm sm:max-w-md w-[calc(100vw-3rem)] animate-bounce-subtle">
-      <div className="relative rounded-2xl bg-gradient-to-br from-[#003835] via-[#002624] to-[#2B060F] p-5 sm:p-6 border-2 border-gold-400/90 shadow-[0_20px_50px_rgba(0,0,0,0.8)] text-ivory-100 corner-decor overflow-hidden">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 max-w-[340px] sm:max-w-sm w-[calc(100vw-2rem)] animate-fadeIn">
+      <div className="relative rounded-2xl bg-gradient-to-br from-[#003835] via-[#002624] to-[#2B060F] p-4 sm:p-5 border-2 border-gold-400 shadow-[0_15px_40px_rgba(0,0,0,0.85)] text-ivory-100 overflow-hidden">
         
-        {/* Background festive glow & mandala */}
-        <div className="absolute top-0 right-0 w-32 opacity-15 pointer-events-none">
-          <img src="/assets/ornaments/mandala-corner.png" alt="" className="w-full h-auto" />
-        </div>
-
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-3 right-3 p-1.5 rounded-full bg-emerald-950/80 border border-gold-400/50 text-gold-300 hover:text-white hover:border-gold-300 transition-colors"
-          aria-label="Close popup"
+          className="absolute top-2.5 right-2.5 p-1 rounded-full bg-emerald-950/80 border border-gold-400/50 text-gold-300 hover:text-white hover:border-gold-300 transition-colors"
+          aria-label="Close"
         >
-          <X className="w-4 h-4" />
+          <X className="w-3.5 h-3.5" />
         </button>
 
-        {/* Content */}
-        <div className="flex items-start gap-3.5 mb-3">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 text-emerald-950 flex items-center justify-center shrink-0 shadow-gold-subtle">
-            <Ticket className="w-6 h-6" />
+        {/* Compact Header */}
+        <div className="flex items-center gap-2.5 mb-2 pr-6">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 text-emerald-950 flex items-center justify-center shrink-0 shadow-gold-subtle">
+            <Ticket className="w-4 h-4" />
           </div>
           <div>
-            <div className="flex items-center gap-1.5 mb-0.5">
-              <span className="px-2 py-0.5 rounded bg-maroon-500/80 text-[10px] font-bold tracking-wider uppercase text-white flex items-center gap-1">
-                <Flame className="w-3 h-3 text-gold-300" /> SELLING FAST
+            <div className="flex items-center gap-1.5">
+              <span className="px-1.5 py-0.2 rounded bg-maroon-500 text-[9px] font-bold tracking-wider uppercase text-white flex items-center gap-0.5">
+                <Flame className="w-2.5 h-2.5 text-gold-300" /> FAST FILLING
               </span>
               <span className="text-[10px] font-mono text-gold-300 font-bold">19 & 20 OCT</span>
             </div>
-            <h4 className="font-serif text-lg font-bold text-ivory-100 leading-tight">
-              Book Official Passes on Fizmaa
+            <h4 className="font-serif text-sm sm:text-base font-bold text-ivory-100 leading-tight">
+              Book Passes on Fizmaa
             </h4>
           </div>
         </div>
 
-        <p className="text-xs text-ivory-200/80 mb-4 leading-relaxed">
-          Passes starting from <strong className="text-gold-300 font-bold">₹399</strong>. Exclusive entry for Legacy & Democracy Lawns. Grab your tickets before prices rise!
+        <p className="text-[11px] text-ivory-200/80 mb-3 leading-snug">
+          Official passes starting at <strong className="text-gold-300 font-bold">₹399</strong>. Select your night below:
         </p>
 
-        {/* CTA Button */}
-        <a
-          href={EVENT_INFO.fizmaaTicketUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => {
-            sessionStorage.setItem('gnr_booking_popup_dismissed', 'true');
-          }}
-          className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gold-gradient text-emerald-950 font-sans font-bold text-xs uppercase tracking-wider shadow-gold-glow hover:scale-[1.02] active:scale-[0.98] transition-all border border-gold-200"
-        >
-          <span>Book Tickets on Fizmaa</span>
-          <ArrowRight className="w-4 h-4" />
-        </a>
+        {/* Dual CTA Buttons for 19 Oct & 20 Oct */}
+        <div className="grid grid-cols-2 gap-2">
+          {/* Day 1: Legacy (19 Oct) */}
+          <a
+            href={EVENT_INFO.fizmaaLegacyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => sessionStorage.setItem('gnr_booking_popup_dismissed', 'true')}
+            className="inline-flex flex-col items-center justify-center p-2.5 rounded-xl bg-gold-gradient text-emerald-950 font-bold text-center border border-gold-200 shadow-gold-subtle hover:scale-[1.02] active:scale-[0.98] transition-all"
+          >
+            <span className="text-[9px] uppercase font-mono tracking-wider text-emerald-900 opacity-80">DAY 01 • 19 OCT</span>
+            <span className="text-[11px] uppercase tracking-wide flex items-center gap-1 font-extrabold">
+              LEGACY PASS <ArrowRight className="w-3 h-3" />
+            </span>
+          </a>
+
+          {/* Day 2: Democracy (20 Oct) */}
+          <a
+            href={EVENT_INFO.fizmaaDemocracyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => sessionStorage.setItem('gnr_booking_popup_dismissed', 'true')}
+            className="inline-flex flex-col items-center justify-center p-2.5 rounded-xl bg-gradient-to-r from-[#F3CC78] via-[#E8B95B] to-[#D9A441] text-maroon-950 font-bold text-center border border-gold-200 shadow-gold-subtle hover:scale-[1.02] active:scale-[0.98] transition-all"
+          >
+            <span className="text-[9px] uppercase font-mono tracking-wider text-maroon-900 opacity-80">DAY 02 • 20 OCT</span>
+            <span className="text-[11px] uppercase tracking-wide flex items-center gap-1 font-extrabold">
+              DEMOCRACY <ArrowRight className="w-3 h-3" />
+            </span>
+          </a>
+        </div>
 
       </div>
     </div>

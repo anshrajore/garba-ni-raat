@@ -144,11 +144,11 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ isPlaying, onToggle })
   }, [isPlaying, tempo]);
 
   return (
-    /* Floating Bottom-Right Garba Music Player Widget */
-    <div className="fixed bottom-6 right-6 z-50 animate-fadeIn">
+    /* Floating Bottom-Left Garba Music Player Widget (Never overlaps with Right Popups or Card Buttons) */
+    <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-40 animate-fadeIn">
       <button
         onClick={onToggle}
-        className={`flex items-center gap-3 px-4 py-2.5 rounded-full border shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 ${
+        className={`flex items-center gap-2 sm:gap-3 p-2.5 sm:px-4 sm:py-2.5 rounded-full border shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 ${
           isPlaying
             ? 'bg-gradient-to-r from-emerald-900 via-emerald-850 to-maroon-900 border-gold-300 text-ivory-100 shadow-gold-glow'
             : 'bg-emerald-950/90 backdrop-blur-md border-gold-500/40 text-gold-300 hover:border-gold-400'
@@ -156,14 +156,14 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ isPlaying, onToggle })
         title={isPlaying ? 'Pause Garba Song' : 'Play Authentic Garba Beats'}
         aria-label="Toggle Garba Music"
       >
-        <div className="relative">
-          <Disc className={`w-5 h-5 ${isPlaying ? 'animate-spin-slow text-gold-300' : 'text-gold-500'}`} />
+        <div className="relative shrink-0">
+          <Disc className={`w-4 h-4 sm:w-5 sm:h-5 ${isPlaying ? 'animate-spin-slow text-gold-300' : 'text-gold-500'}`} />
           {isPlaying && (
             <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-gold-400 animate-ping" />
           )}
         </div>
 
-        <div className="text-left">
+        <div className="text-left hidden sm:block">
           <div className="flex items-center gap-1.5">
             <span className="text-[11px] font-bold tracking-wider font-serif uppercase">
               {isPlaying ? 'GARBA BEATS PLAYING' : 'PLAY GARBA SONG'}
