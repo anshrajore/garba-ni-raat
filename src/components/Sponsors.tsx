@@ -1,8 +1,28 @@
 import React from 'react';
 import { PARTNERS_DATA, EVENT_INFO } from '../data/eventData';
-import { MessageCircle, ArrowRight, Crown } from 'lucide-react';
+import { MessageCircle, ArrowRight, Crown, Sparkles, Gem, Shirt, Gamepad2, Hotel, Scissors, Utensils, Plane, Home, HeartHandshake, Soup, Gift, Compass, Users, Leaf } from 'lucide-react';
 
 export const Sponsors: React.FC = () => {
+  // Helper to get category icon for text-based partners
+  const getPartnerIcon = (role: string) => {
+    const r = role.toLowerCase();
+    if (r.includes('jewel')) return <Gem className="w-5 h-5 text-gold-400" />;
+    if (r.includes('drip') || r.includes('style')) return <Shirt className="w-5 h-5 text-gold-400" />;
+    if (r.includes('gaming')) return <Gamepad2 className="w-5 h-5 text-gold-400" />;
+    if (r.includes('hospitality') || r.includes('resort')) return <Hotel className="w-5 h-5 text-gold-400" />;
+    if (r.includes('salon') || r.includes('lifestyle')) return <Scissors className="w-5 h-5 text-gold-400" />;
+    if (r.includes('food')) return <Utensils className="w-5 h-5 text-gold-400" />;
+    if (r.includes('travel')) return <Plane className="w-5 h-5 text-gold-400" />;
+    if (r.includes('real estate') || r.includes('builder')) return <Home className="w-5 h-5 text-gold-400" />;
+    if (r.includes('comfort')) return <HeartHandshake className="w-5 h-5 text-gold-400" />;
+    if (r.includes('masala')) return <Soup className="w-5 h-5 text-gold-400" />;
+    if (r.includes('gift')) return <Gift className="w-5 h-5 text-gold-400" />;
+    if (r.includes('paithani')) return <Compass className="w-5 h-5 text-gold-400" />;
+    if (r.includes('community')) return <Users className="w-5 h-5 text-gold-400" />;
+    if (r.includes('sustainability') || r.includes('plogger')) return <Leaf className="w-5 h-5 text-gold-400" />;
+    return <Sparkles className="w-5 h-5 text-gold-400" />;
+  };
+
   return (
     <section id="sponsors" className="relative py-20 sm:py-28 bg-[#F5E6CC] text-[#1A2E2B] overflow-hidden">
       
@@ -14,7 +34,7 @@ export const Sponsors: React.FC = () => {
         <img src="/assets/ornaments/mandala-corner.png" alt="" className="w-full h-auto filter brightness-50" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="text-center mb-14">
@@ -26,187 +46,160 @@ export const Sponsors: React.FC = () => {
             <span className="h-[1px] w-12 bg-[#8A5A1A]" />
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#2B1B10]">
-            Official Festival Partners
+            Official Sponsors &amp; Partners
           </h2>
+          <p className="text-xs sm:text-sm text-[#6E4B28] mt-2 max-w-lg mx-auto">
+            Proudly supported by leading industry leaders and trusted brands across Nashik &amp; India.
+          </p>
         </div>
 
         {/* ──────────────────────────────────────────── */}
-        {/* PRESENTED BY — Hero Banner Row */}
+        {/* TITLE SPONSOR — Grand Luxury Showcase */}
         {/* ──────────────────────────────────────────── */}
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-5">
             <Crown className="w-4 h-4 text-[#8A5A1A]" />
             <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
-              Presented By
+              Title Sponsor
             </span>
             <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
           </div>
 
-          <div className="bg-white rounded-2xl border border-[#D9A441] shadow-lg p-6 sm:p-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
-              {PARTNERS_DATA.presentedBy.map((p, idx) => (
-                <React.Fragment key={idx}>
-                  {idx > 0 && (
-                    <div className="hidden sm:block w-[1px] h-20 bg-[#D9A441]/30" />
-                  )}
-                  <div className="flex flex-col items-center text-center group">
-                    <div className="h-20 sm:h-24 flex items-center justify-center mb-2">
-                      <img
-                        src={p.logo}
-                        alt={p.name}
-                        className="max-h-full max-w-[180px] object-contain transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    <h3 className="font-serif text-base font-bold text-[#2B1B10]">{p.name}</h3>
-                    <p className="text-[11px] text-[#8A5A1A]">{p.tagline}</p>
-                  </div>
-                </React.Fragment>
-              ))}
+          <div className="relative bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] text-[#FFF5DD] rounded-2xl border-2 border-[#D9A441] shadow-2xl p-8 sm:p-10 text-center overflow-hidden group">
+            {/* Ambient Background Glow */}
+            <div className="absolute inset-0 bg-radial-glow opacity-30 pointer-events-none" />
+            
+            <div className="relative z-10 flex flex-col items-center justify-center">
+              <span className="inline-block px-4 py-1 rounded-full bg-gold-500/20 border border-gold-300/40 text-gold-300 text-[10px] sm:text-xs uppercase font-mono tracking-[0.25em] font-bold mb-4">
+                👑 TITLE SPONSOR
+              </span>
+              <h3 className="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-gold-200 tracking-wide mb-2 drop-shadow-md">
+                {PARTNERS_DATA.titleSponsor.name}
+              </h3>
+              <p className="text-xs sm:text-sm text-ivory-200/80 max-w-md font-sans">
+                {PARTNERS_DATA.titleSponsor.tagline}
+              </p>
             </div>
           </div>
         </div>
 
         {/* ──────────────────────────────────────────── */}
-        {/* CORE PARTNERS — 3-Col Compact Grid */}
+        {/* ORGANIZERS & CO-POWERED BY */}
         {/* ──────────────────────────────────────────── */}
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
-              Official Partners
-            </span>
-            <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+          
+          {/* Organizers (2 Cols) */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
+                Event Organizers
+              </span>
+              <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
+            </div>
+
+            <div className="bg-white rounded-2xl border border-[#D9A441] shadow-md p-6 sm:p-7">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-center">
+                {PARTNERS_DATA.organizers.map((org, idx) => (
+                  <div key={idx} className="flex flex-col items-center group">
+                    <div className="h-16 sm:h-20 flex items-center justify-center mb-2">
+                      <img
+                        src={org.logo}
+                        alt={org.name}
+                        className="max-h-full max-w-[140px] object-contain transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <span className="text-[9px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-0.5">
+                      {org.role}
+                    </span>
+                    <h4 className="font-serif text-sm sm:text-base font-bold text-[#2B1B10]">
+                      {org.name}
+                    </h4>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-            {/* Powered By */}
-            <div className="bg-white rounded-2xl border border-[#D9A441]/40 p-5 flex flex-col items-center text-center hover:shadow-lg transition-all hover:border-[#D9A441]">
-              <span className="text-[9px] uppercase font-mono tracking-[0.2em] font-bold text-[#8A5A1A]/70 mb-3">
-                Powered By
+          {/* Co-Powered By (1 Col) */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
+                Co-Powered By
               </span>
-              <div className="h-16 sm:h-20 w-full flex items-center justify-center mb-3">
+              <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
+            </div>
+
+            <div className="bg-white rounded-2xl border border-[#D9A441] shadow-md p-6 sm:p-7 flex flex-col items-center text-center justify-center h-[calc(100%-2rem)]">
+              <div className="h-16 sm:h-20 w-full flex items-center justify-center mb-2">
                 <img
-                  src={PARTNERS_DATA.poweredBy.logo}
-                  alt={PARTNERS_DATA.poweredBy.name}
+                  src={PARTNERS_DATA.coPoweredBy.logo}
+                  alt={PARTNERS_DATA.coPoweredBy.name}
                   className="max-h-full max-w-[160px] object-contain invert"
                 />
               </div>
-              <h4 className="font-serif text-sm font-bold text-[#2B1B10] leading-tight">
-                {PARTNERS_DATA.poweredBy.name}
-              </h4>
-              <p className="text-[10px] text-[#6E4B28] mt-0.5">{PARTNERS_DATA.poweredBy.tagline}</p>
-            </div>
-
-            {/* Gaming Zone */}
-            <div className="bg-white rounded-2xl border border-[#D9A441]/40 p-5 flex flex-col items-center text-center hover:shadow-lg transition-all hover:border-[#D9A441]">
-              <span className="text-[9px] uppercase font-mono tracking-[0.2em] font-bold text-[#8A5A1A]/70 mb-3">
-                Gaming Zone Partner
+              <span className="text-[9px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-0.5">
+                {PARTNERS_DATA.coPoweredBy.role}
               </span>
-              <div className="h-16 sm:h-20 w-full flex items-center justify-center mb-3">
-                <img
-                  src={PARTNERS_DATA.gamingPartner.logo}
-                  alt={PARTNERS_DATA.gamingPartner.name}
-                  className="max-h-full max-w-[160px] object-contain"
-                />
-              </div>
-              <h4 className="font-serif text-sm font-bold text-[#2B1B10] leading-tight">
-                {PARTNERS_DATA.gamingPartner.name}
+              <h4 className="font-serif text-base font-bold text-[#2B1B10]">
+                {PARTNERS_DATA.coPoweredBy.name}
               </h4>
-              <p className="text-[10px] text-[#6E4B28] mt-0.5">{PARTNERS_DATA.gamingPartner.tagline}</p>
-            </div>
-
-            {/* Ticketing */}
-            <a
-              href={EVENT_INFO.fizmaaTicketUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white rounded-2xl border-2 border-[#D9A441] p-5 flex flex-col items-center text-center hover:shadow-lg transition-all group"
-            >
-              <span className="text-[9px] uppercase font-mono tracking-[0.2em] font-bold text-[#8A5A1A]/70 mb-3">
-                Official Ticketing Partner
-              </span>
-              <div className="h-16 sm:h-20 w-full flex items-center justify-center mb-3">
-                <img
-                  src={PARTNERS_DATA.ticketingPartner.logo}
-                  alt={PARTNERS_DATA.ticketingPartner.name}
-                  className="max-h-full max-w-[140px] object-contain group-hover:scale-105 transition-transform"
-                />
-              </div>
-              <h4 className="font-serif text-sm font-bold text-[#2B1B10] leading-tight">
-                {PARTNERS_DATA.ticketingPartner.name}
-              </h4>
-              <p className="text-[10px] font-bold text-[#EB1537] mt-1 flex items-center gap-1">
-                Book Passes <ArrowRight className="w-3 h-3" />
+              <p className="text-[10px] text-[#6E4B28] mt-0.5">
+                {PARTNERS_DATA.coPoweredBy.tagline}
               </p>
-            </a>
-
+            </div>
           </div>
+
         </div>
 
         {/* ──────────────────────────────────────────── */}
-        {/* FOOD • HOSPITALITY • GROOMING — Horizontal Cards */}
+        {/* OFFICIAL CATEGORY PARTNERS (14 Brands) */}
         {/* ──────────────────────────────────────────── */}
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-5">
+        <div className="mb-14">
+          <div className="flex items-center gap-3 mb-6">
+            <Sparkles className="w-4 h-4 text-[#8A5A1A]" />
             <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
-              Food • Hospitality • Grooming
+              Official Category &amp; Experience Partners
             </span>
             <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-            {/* Sadhana Rajeshahi */}
-            <div className="bg-white rounded-2xl border border-[#D9A441]/30 p-5 flex flex-col items-center text-center hover:shadow-md transition-all hover:border-[#D9A441]/60">
-              <span className="text-[9px] uppercase font-mono tracking-[0.15em] font-bold text-[#C02C42] mb-3">
-                Nashik Misal Partner
-              </span>
-              <div className="h-20 w-full flex items-center justify-center mb-2">
-                <img
-                  src={PARTNERS_DATA.foodAndLifestyle[0].logo}
-                  alt={PARTNERS_DATA.foodAndLifestyle[0].name}
-                  className="max-h-full max-w-[160px] object-contain"
-                />
-              </div>
-              <h4 className="font-serif text-sm font-bold text-[#2B1B10]">
-                {PARTNERS_DATA.foodAndLifestyle[0].name}
-              </h4>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {PARTNERS_DATA.allPartners.map((partner, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl border border-[#D9A441]/40 p-4 sm:p-5 flex flex-col items-center text-center hover:shadow-lg transition-all hover:border-[#D9A441] group"
+              >
+                {/* Category Role Badge */}
+                <span className="text-[9px] uppercase font-mono tracking-wider font-bold text-[#8A5A1A] bg-[#FDF6E9] px-2.5 py-1 rounded-full border border-[#D9A441]/30 mb-3 block w-full truncate">
+                  {partner.role}
+                </span>
 
-            {/* Sadhana Village Resort */}
-            <div className="bg-white rounded-2xl border border-[#D9A441]/30 p-5 flex flex-col items-center text-center hover:shadow-md transition-all hover:border-[#D9A441]/60">
-              <span className="text-[9px] uppercase font-mono tracking-[0.15em] font-bold text-[#006B5A] mb-3">
-                Hospitality Partner
-              </span>
-              <div className="h-20 w-full flex items-center justify-center mb-2">
-                <img
-                  src={PARTNERS_DATA.hospitalityPartner.logo}
-                  alt={PARTNERS_DATA.hospitalityPartner.name}
-                  className="max-h-full max-w-[180px] object-contain"
-                />
-              </div>
-              <h4 className="font-serif text-sm font-bold text-[#2B1B10]">
-                {PARTNERS_DATA.hospitalityPartner.name}
-              </h4>
-            </div>
+                {/* Logo or Icon Display */}
+                <div className="h-16 w-full flex items-center justify-center mb-2">
+                  {partner.logo ? (
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-full max-w-[130px] object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-950 to-emerald-900 flex items-center justify-center border border-gold-400/40 shadow-inner group-hover:scale-110 transition-transform">
+                      {getPartnerIcon(partner.role)}
+                    </div>
+                  )}
+                </div>
 
-            {/* Vishal's Salon */}
-            <div className="bg-white rounded-2xl border border-[#D9A441]/30 p-5 flex flex-col items-center text-center hover:shadow-md transition-all hover:border-[#D9A441]/60">
-              <span className="text-[9px] uppercase font-mono tracking-[0.15em] font-bold text-[#2B1B10] mb-3">
-                Grooming & Styling Partner
-              </span>
-              <div className="h-20 w-full flex items-center justify-center mb-2">
-                <img
-                  src={PARTNERS_DATA.foodAndLifestyle[1].logo}
-                  alt={PARTNERS_DATA.foodAndLifestyle[1].name}
-                  className="max-h-full max-w-[180px] object-contain"
-                />
-              </div>
-              <h4 className="font-serif text-sm font-bold text-[#2B1B10]">
-                {PARTNERS_DATA.foodAndLifestyle[1].name}
-              </h4>
-            </div>
+                {/* Partner Name */}
+                <h4 className="font-serif text-sm font-bold text-[#2B1B10] leading-snug mt-1">
+                  {partner.name}
+                </h4>
 
+                {/* Tagline */}
+                <p className="text-[10px] text-[#6E4B28] mt-0.5 line-clamp-1">
+                  {partner.tagline}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -219,7 +212,7 @@ export const Sponsors: React.FC = () => {
               Partner with Garba Ni Raat 2026
             </h3>
             <p className="text-xs text-[#F4E2C0]/80 mt-1 max-w-md">
-              Connect your brand with 5,000+ festive attendees. Stalls, title branding & experiential activations available.
+              Connect your brand with 5,000+ festive attendees. Stalls, title branding &amp; experiential activations available.
             </p>
           </div>
           <a

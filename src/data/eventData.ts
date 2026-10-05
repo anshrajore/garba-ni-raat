@@ -164,76 +164,117 @@ export const PARTNERS_DATA = {
   headline: 'OFFICIAL FESTIVAL PARTNERS',
   subtitle: 'IN PARTNERSHIP FOR A GRANDER CELEBRATION',
 
-  presentedBy: [
+  organizers: [
     {
       name: 'Event Circle',
       tagline: 'An Event Company',
-      role: 'PRESENTED BY',
+      role: 'EVENT ORGANIZER',
       logo: '/assets/partners/event-circle-logo.png'
     },
     {
-      name: 'FestHaus Productions',
+      name: 'Fest House Productions',
       tagline: 'Grand Experiential Productions',
-      role: 'PRESENTED BY',
+      role: 'EVENT ORGANIZER',
       logo: '/assets/partners/festhaus-logo.png'
     },
     {
-      name: 'Eventverse Studio',
+      name: 'Event Verse',
       tagline: 'Event Verse Production & Infrastructure',
-      role: 'PRESENTED BY',
+      role: 'EVENT ORGANIZER',
       logo: '/assets/partners/eventverse-logo.png'
     }
   ],
 
-  poweredBy: {
-    name: 'The Team Indian Fitness',
-    role: 'POWERED BY',
+  titleSponsor: {
+    name: 'AU Small Finance Bank',
+    role: 'TITLE SPONSOR',
+    tagline: 'Empowering Navratri Celebrations Across Nashik'
+  },
+
+  coPoweredBy: {
+    name: 'Indian Fitness Gym',
+    role: 'CO-POWERED BY',
     tagline: 'Official Fitness & Energy Partner',
     logo: '/assets/partners/team-indian-fitness-logo.png'
   },
 
-  rentalPartner: {
-    name: 'Eventverse Studio',
-    role: 'OFFICIAL RENTAL PARTNER',
-    tagline: 'Event Verse Production & Infrastructure',
-    logo: '/assets/partners/eventverse-logo.png'
-  },
-
-  gamingPartner: {
-    name: 'Fizzyfox',
-    role: 'OFFICIAL GAMING ZONE PARTNER',
-    logo: '/assets/partners/fizzyfox-logo.png',
-    tagline: 'Exciting Festive Gaming & Entertainment Arena'
-  },
-
-  ticketingPartner: {
-    name: 'Fizmaa',
-    role: 'EXCLUSIVE OFFICIAL TICKETING PARTNER',
-    logo: '/assets/brand/fizmaa-logo.png',
-    url: 'https://live.fizmaa.com/event.html?id=111'
-  },
-
-  foodAndLifestyle: [
+  allPartners: [
     {
-      name: 'Sadhana Rajeshahi',
-      role: 'OFFICIAL NASHIK MISAL PARTNER',
-      tagline: 'Authentic Chulivarchi Misal of Nashik',
-      logo: '/assets/partners/sadhana-rajeshahi-logo.png'
+      name: 'Shree Khubani Jewellers',
+      role: 'Jewellery Partner',
+      tagline: 'Est. 1968 • Pure Elegance',
+      logo: '/assets/partners/shree-khubani-jewellers-logo.png'
     },
     {
-      name: 'Vishal\'s Salon & Wellness Center',
-      role: 'OFFICIAL GROOMING & STYLING PARTNER',
-      tagline: 'Hair | Beauty | Nails | Makeup',
+      name: 'The Last Age',
+      role: 'Drip Partner',
+      tagline: 'Official Festive Style & Drip',
+      logo: '/assets/partners/the-last-age-logo.png'
+    },
+    {
+      name: 'Fizzy Fox',
+      role: 'Official Gaming Zone Partner',
+      tagline: 'Interactive Gaming Arena',
+      logo: '/assets/partners/fizzyfox-logo.png'
+    },
+    {
+      name: 'Sadhana Village Resort',
+      role: 'Official Hospitality Partner',
+      tagline: 'Stay & Celebrate In Luxury',
+      logo: '/assets/partners/sadhana-village-resort-logo.png'
+    },
+    {
+      name: 'Vishal Salon',
+      role: 'Lifestyle Gifting Partner',
+      tagline: 'Hair • Beauty • Grooming',
       logo: '/assets/partners/vishal-salon-logo.png'
+    },
+    {
+      name: 'Dhapte',
+      role: 'Food Partner',
+      tagline: 'Authentic Festive Flavours'
+    },
+    {
+      name: 'Sony Holidays',
+      role: 'Travel Partner',
+      tagline: 'Your Trusted Travel Companion'
+    },
+    {
+      name: 'Akshay Builders',
+      role: 'Real Estate Partner',
+      tagline: 'Building Nashik’s Finest Landmarks'
+    },
+    {
+      name: 'Ekta Enterprises',
+      role: 'Official Comfort Partner',
+      tagline: 'Festival Comfort & Quality'
+    },
+    {
+      name: 'Kothmire Masale',
+      role: 'Masala Partner',
+      tagline: 'Authentic Tradition & Taste'
+    },
+    {
+      name: 'Sony Gifts',
+      role: 'Gifting Partner',
+      tagline: 'Festive Moments & Surprises'
+    },
+    {
+      name: 'Kalashahi Paithani',
+      role: 'Paithani Partner',
+      tagline: 'Heritage Festive Weaves'
+    },
+    {
+      name: 'Anabolic Club',
+      role: 'Community Partner',
+      tagline: 'Youth & Strength Community'
+    },
+    {
+      name: 'Fitness Nasik Ploggers',
+      role: 'Sustainability Partner',
+      tagline: 'Clean & Green Nashik Movement'
     }
-  ],
-
-  hospitalityPartner: {
-    name: 'Sadhana Village Resort',
-    role: 'OFFICIAL HOSPITALITY PARTNER',
-    tagline: 'Stay & Celebrate — Premium Resort Experience',
-    logo: '/assets/partners/sadhana-village-resort-logo.png'
-  }
+  ]
 };
 
 export const GALLERY_PHOTOS = [
