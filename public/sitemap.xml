@@ -3,66 +3,58 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.garbaniraat.live/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.garbaniraat.live/assets/backgrounds/desktop-bg.jpg</image:loc>
-      <image:title>Garba Ni Raat 2026 Nashik - Grand Royal Navratri Festival</image:title>
-      <image:caption>Two grand nights of celebration on 19 and 20 October 2026 in Nashik</image:caption>
+      <image:title>Garba Ni Raat 2026 Nashik - Best Navratri Garba Festival</image:title>
+      <image:caption>Nashik's biggest and grandest 2-night Navratri celebration on 19 and 20 October 2026 at Legacy Lawns and Democracy Lawns</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://www.garbaniraat.live/assets/brand/garba-ni-raat-logo.png</image:loc>
       <image:title>Garba Ni Raat Official Logo</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://www.garbaniraat.live/assets/gallery/venue-legacy.jpg</image:loc>
-      <image:title>Legacy Lawns Nashik Day 1 Venue</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.garbaniraat.live/assets/gallery/venue-democracy.jpg</image:loc>
-      <image:title>Democracy Lawns Nashik Day 2 Venue</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://www.garbaniraat.live/#book-your-night</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.garbaniraat.live/#choose-experience</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.garbaniraat.live/#venue</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.garbaniraat.live/#sponsors</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.garbaniraat.live/#gallery</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.garbaniraat.live/#faq</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.garbaniraat.live/#contact</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

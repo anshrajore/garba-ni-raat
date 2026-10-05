@@ -292,29 +292,39 @@ export const TERMS_AND_CONDITIONS = [
 
 export const SEO_FAQS = [
   {
+    question: 'What is the best garba event in Nashik 2026?',
+    answer: 'Garba Ni Raat is widely regarded as Nashik\'s best and biggest Navratri garba event in 2026. It is a premium 2-night royal celebration held on 19 October at Legacy Lawns & Banquets (Gangapur Road) and 20 October at Democracy Grand Open Air Lawns — featuring live dhol orchestras, authentic Raas-Garba, celebrity DJ sets, dandiya showdowns, VIP Cover Passes with F&B credit, and best-dressed awards.'
+  },
+  {
+    question: 'Where is the best place to play garba in Nashik?',
+    answer: 'The best place to play garba in Nashik is at Garba Ni Raat 2026, held at two iconic venues: Legacy Lawns & Banquets on Gangapur Road (19 Oct) and Democracy Grand Open Air Lawns (20 Oct). These are Nashik\'s most spacious and premium open-air festive venues with professional sound, lighting, and dedicated Raas-Garba arenas.'
+  },
+  {
     question: 'When and where is Garba Ni Raat 2026 happening in Nashik?',
-    answer: 'Garba Ni Raat 2026 is a premier 2-night royal Navratri festival happening across two iconic venues in Nashik: Day 1 on 19 October 2026 at Legacy Lawns & Banquets, and Day 2 on 20 October 2026 at Democracy Grand Open Air Lawns.'
+    answer: 'Garba Ni Raat 2026 is a premier 2-night royal Navratri festival in Nashik: Day 1 on 19 October 2026 at Legacy Lawns & Banquets (Gangapur Road), and Day 2 on 20 October 2026 at Democracy Grand Open Air Lawns. Gates open at 6:00 PM both nights.'
   },
   {
-    question: 'What are the pass prices for 19th Oct at Legacy Lawns?',
-    answer: 'For 19th Oct Legacy Lawns: General Pass is ₹649/-, Couple Pass is ₹1,249/-, and VIP Group Pass (SPAX) is ₹3,199/- for up to 5 persons. VIP Cover Passes with Food & Beverage credit are also available.'
-  },
-  {
-    question: 'What are the pass prices for 20th Oct at Democracy Lawns?',
-    answer: 'For 20th Oct Democracy Lawns: General Pass is ₹449/-, Couple Pass is ₹850/-, and Group Pass (SPAX) is ₹2,199/- for up to 5 persons.'
+    question: 'What are the ticket prices for Garba Ni Raat Nashik 2026?',
+    answer: '19th Oct Legacy Lawns: General ₹649, Couple ₹1,249, Group/SPAX ₹3,199 (up to 5 persons). 20th Oct Democracy Lawns: General ₹449, Couple ₹850, Group/SPAX ₹2,199. VIP Cover Passes: Single ₹999, Double ₹1,899 (includes F&B credit, fast-track entry, royal lounge, dandiya pair, and valet parking).'
   },
   {
     question: 'How can I book official passes for Garba Ni Raat Nashik?',
-    answer: 'Official passes are sold exclusively online through Fizmaa (official ticketing partner) and through our direct WhatsApp booking concierge (+91 85540 18129) for VIP Cover Passes.'
+    answer: 'Official passes are available exclusively on Fizmaa (the official ticketing partner): Legacy Lawns (19 Oct) at live.fizmaa.com and Democracy Lawns (20 Oct) at live.fizmaa.com. VIP Cover Passes can also be booked via WhatsApp concierge at +91 85540 18129.'
+  },
+  {
+    question: 'How does Garba Ni Raat compare to other Nashik Navratri events?',
+    answer: 'Garba Ni Raat stands out as Nashik\'s premium multi-night Navratri experience. While Nashik hosts various events like Raasiya Navratri, Param Navratri, Raas Revolution, Navkar Events, AshtaRang, Raasotsav, and Garba By Shreem Decor — Garba Ni Raat offers the most comprehensive royal experience with 2 grand nights across Nashik\'s two most iconic venues, VIP Cover Passes with food & beverage credit, live dhol orchestras, and celebrity performances.'
   },
   {
     question: 'What are the event timings and dress code?',
-    answer: 'Gates open at 6:30 PM with live folk bands, dhol troupes, and traditional Raas starting at 7:00 PM onwards. Traditional festive attire (Chaniya Cholis, Kediyus, and Kurtas) is celebrated with Best Dressed Royal Awards.'
+    answer: 'Gates open at 6:00 PM both nights (19 & 20 October). Live folk bands, dhol troupes, and traditional Raas-Garba start at 7:00 PM and continue until midnight. Traditional festive attire (Chaniya Cholis, Kediyus, Kurtas) is celebrated with Best Dressed Royal Awards.'
   },
   {
-    question: 'Is parking available at the venues?',
-    answer: 'Yes, both Legacy Lawns and Democracy Lawns have designated, secure parking facilities with valet options for VIP pass holders.'
+    question: 'Is parking available at Legacy Lawns and Democracy Lawns?',
+    answer: 'Yes, both Legacy Lawns (Gangapur Road) and Democracy Grand Open Air Lawns have designated, secure parking facilities. VIP Cover Pass holders enjoy complimentary valet parking.'
+  },
+  {
+    question: 'What Navratri garba events are happening in Nashik in October 2026?',
+    answer: 'Nashik\'s Navratri 2026 season runs from 11-20 October. The headline festival is Garba Ni Raat on 19 & 20 October — Nashik\'s biggest and most premium 2-night celebration at Legacy Lawns and Democracy Lawns. Other events include Raasiya Navratri, Param Navratri, Raas Revolution, Garba By Shreem Decor, MSA Garba Raas, Navkar Events, Rangilo Raas, Navraag Utsav, Raasotsav, AshtaRang, and more. Garba Ni Raat is the grand finale weekend closing the season.'
   }
 ];
-
-
