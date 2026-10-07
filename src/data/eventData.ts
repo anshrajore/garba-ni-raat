@@ -218,12 +218,6 @@ export const PARTNERS_DATA = {
       logo: '/assets/partners/fizzyfox-logo.png'
     },
     {
-      name: 'Sadhana Village Resort',
-      role: 'Official Hospitality Partner',
-      tagline: 'Stay & Celebrate In Luxury',
-      logo: '/assets/partners/sadhana-village-resort-logo.png'
-    },
-    {
       name: 'Vishal Salon',
       role: 'Lifestyle Gifting Partner',
       tagline: 'Hair • Beauty • Grooming',
