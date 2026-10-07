@@ -58,14 +58,17 @@ export const Hero: React.FC = () => {
           <img src="/assets/ornaments/royal-diya-hd.png" alt="Auspicious Diya" className="w-5 h-5 object-contain animate-pulse" />
         </div>
 
-        {/* Master Logo Wordmark */}
-        <div className="relative w-full max-w-xl sm:max-w-2xl px-2 mb-4 animate-float-slow">
+        {/* Master Logo Wordmark & Semantic SEO Heading */}
+        <h1 className="relative w-full max-w-xl sm:max-w-2xl px-2 mb-4 animate-float-slow">
           <img
             src="/assets/brand/garba-ni-raat-logo.png"
-            alt="Garba Ni Raat"
+            alt="Garba Ni Raat 2026 — Best Navratri Garba in Nashik"
             className="w-full h-auto object-contain mx-auto filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.85)]"
           />
-        </div>
+          <span className="sr-only">
+            Garba Ni Raat 2026 — Nashik's Best &amp; Biggest Navratri Garba Festival at Legacy Lawns and Democracy Lawns
+          </span>
+        </h1>
 
         {/* Event Date & Location Bar */}
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 my-2 px-5 py-2 rounded-xl bg-emerald-900/50 backdrop-blur-md border border-gold-500/30 text-ivory-100">
