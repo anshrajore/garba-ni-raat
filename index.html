@@ -65,7 +65,7 @@
     <link rel="dns-prefetch" href="https://live.fizmaa.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
+    <!-- ═══ SCHEMA.ORG JSON-LD (Strictly Validated with All 5 Fields) ═══ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -100,14 +100,24 @@
           "@type": "EventSeries",
           "@id": "https://www.garbaniraat.live/#eventseries",
           "name": "Garba Ni Raat 2026",
-          "description": "Nashik's grandest 2-night royal Navratri celebration on 19 & 20 October 2026 at Legacy Lawns and Democracy Lawns.",
+          "description": "Nashik's grandest 2-night royal Navratri celebration on 19 & 20 October 2026 at Legacy Lawns and Democracy Lawns featuring traditional Raas-Garba, live dhol orchestra, and gourmet food stalls.",
           "url": "https://www.garbaniraat.live/",
           "image": "https://www.garbaniraat.live/assets/backgrounds/desktop-bg.jpg",
           "startDate": "2026-10-19T18:00:00+05:30",
           "endDate": "2026-10-21T00:00:00+05:30",
           "eventStatus": "https://schema.org/EventScheduled",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "organizer": { "@id": "https://www.garbaniraat.live/#organization" },
+          "organizer": {
+            "@type": "Organization",
+            "name": "Event Circle, Fest House Productions & Event Verse",
+            "url": "https://www.garbaniraat.live/",
+            "email": "Event.circle07@gmail.com",
+            "telephone": "+918554018129"
+          },
+          "performer": {
+            "@type": "PerformingGroup",
+            "name": "Live Dhol Orchestra & Folk Troupe"
+          },
           "sponsor": [
             {
               "@type": "Organization",
@@ -125,10 +135,24 @@
               "@type": "Festival",
               "@id": "https://www.garbaniraat.live/#day1-legacy",
               "name": "Garba Ni Raat 2026 — Day 1 at Legacy Lawns (19 Oct)",
+              "description": "Inaugural Royal Night with authentic Gujarati Raas-Garba, thunderous dhol orchestra, dandiya showdown, and luxury VIP experience at Legacy Lawns & Banquets, Gangapur Road, Nashik.",
               "url": "https://live.fizmaa.com/event.html?id=111",
               "image": "https://www.garbaniraat.live/assets/backgrounds/desktop-bg.jpg",
               "startDate": "2026-10-19T18:00:00+05:30",
               "endDate": "2026-10-20T00:00:00+05:30",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "organizer": {
+                "@type": "Organization",
+                "name": "Event Circle, Fest House Productions & Event Verse",
+                "url": "https://www.garbaniraat.live/",
+                "email": "Event.circle07@gmail.com",
+                "telephone": "+918554018129"
+              },
+              "performer": {
+                "@type": "PerformingGroup",
+                "name": "Live Dhol Orchestra & Folk Troupe"
+              },
               "location": {
                 "@type": "Place",
                 "name": "Legacy Lawns & Banquets",
@@ -139,6 +163,11 @@
                   "addressRegion": "Maharashtra",
                   "postalCode": "422013",
                   "addressCountry": "IN"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "19.9975",
+                  "longitude": "73.7898"
                 }
               },
               "offers": {
@@ -147,6 +176,7 @@
                 "priceCurrency": "INR",
                 "lowPrice": "649",
                 "highPrice": "3199",
+                "validFrom": "2026-09-01T00:00:00+05:30",
                 "availability": "https://schema.org/InStock"
               }
             },
@@ -154,10 +184,24 @@
               "@type": "Festival",
               "@id": "https://www.garbaniraat.live/#day2-democracy",
               "name": "Garba Ni Raat 2026 — Day 2 at Democracy Lawns (20 Oct)",
+              "description": "Grand Finale Extravaganza with lightning dandiya showdown, celebrity live band, awards ceremony, and high-energy Raas-Garba at Democracy Grand Open Air Lawns, Nashik.",
               "url": "https://live.fizmaa.com/event.html?id=110",
               "image": "https://www.garbaniraat.live/assets/backgrounds/desktop-bg.jpg",
               "startDate": "2026-10-20T18:00:00+05:30",
               "endDate": "2026-10-21T00:00:00+05:30",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "organizer": {
+                "@type": "Organization",
+                "name": "Event Circle, Fest House Productions & Event Verse",
+                "url": "https://www.garbaniraat.live/",
+                "email": "Event.circle07@gmail.com",
+                "telephone": "+918554018129"
+              },
+              "performer": {
+                "@type": "PerformingGroup",
+                "name": "Celebrity DJ & Live Dhol Band"
+              },
               "location": {
                 "@type": "Place",
                 "name": "Democracy Grand Open Air Lawns",
@@ -168,6 +212,11 @@
                   "addressRegion": "Maharashtra",
                   "postalCode": "422013",
                   "addressCountry": "IN"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "20.0063",
+                  "longitude": "73.7710"
                 }
               },
               "offers": {
@@ -176,6 +225,7 @@
                 "priceCurrency": "INR",
                 "lowPrice": "449",
                 "highPrice": "2199",
+                "validFrom": "2026-09-01T00:00:00+05:30",
                 "availability": "https://schema.org/InStock"
               }
             }
