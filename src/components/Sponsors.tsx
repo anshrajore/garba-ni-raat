@@ -55,7 +55,7 @@ export const Sponsors: React.FC = () => {
         </div>
 
         {/* ──────────────────────────────────────────── */}
-        {/* TITLE SPONSOR — Grand Luxury Showcase */}
+        {/* TITLE SPONSOR — Refined Luxury Showcase */}
         {/* ──────────────────────────────────────────── */}
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-5">
@@ -66,34 +66,30 @@ export const Sponsors: React.FC = () => {
             <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
           </div>
 
-          <div className="relative rounded-2xl border-2 border-[#D9A441] shadow-2xl overflow-hidden group">
-            {/* Top gradient bar */}
-            <div className="bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] px-6 pt-5 pb-3 text-center">
-              <span className="inline-block px-4 py-1 rounded-full bg-gold-500/20 border border-gold-300/40 text-gold-300 text-[10px] sm:text-xs uppercase font-mono tracking-[0.25em] font-bold">
-                👑 TITLE SPONSOR
-              </span>
-            </div>
+          <div className="max-w-xl mx-auto bg-white rounded-2xl border-2 border-[#D9A441] shadow-lg p-7 sm:p-9 flex flex-col items-center text-center justify-center hover:shadow-xl transition-all">
+            {/* Title Sponsor Badge */}
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FDF6E9] border border-[#D9A441]/60 text-[11px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-4">
+              <Crown className="w-4 h-4 text-gold-500 fill-gold-500/20" />
+              👑 Title Sponsor
+            </span>
 
-            {/* AU Logo — Full width with brand purple background */}
+            {/* AU Small Finance Bank Logo */}
             {PARTNERS_DATA.titleSponsor.logo && (
-              <div className="bg-[#702082] px-6 sm:px-12 md:px-20 py-6 sm:py-8 flex items-center justify-center">
+              <div className="h-20 sm:h-24 w-full flex items-center justify-center mb-4">
                 <img
-                  src={PARTNERS_DATA.titleSponsor.logo}
+                  src={`${PARTNERS_DATA.titleSponsor.logo}?v=3`}
                   alt={PARTNERS_DATA.titleSponsor.name}
-                  className="w-full max-w-sm sm:max-w-md md:max-w-xl h-auto block"
+                  className="max-h-full max-w-[260px] sm:max-w-[320px] object-contain rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
                 />
               </div>
             )}
 
-            {/* Bottom info bar */}
-            <div className="bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] px-6 py-4 sm:py-5 text-center">
-              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-extrabold text-gold-200 tracking-wide mb-1 drop-shadow-md">
-                {PARTNERS_DATA.titleSponsor.name}
-              </h3>
-              <p className="text-xs sm:text-sm text-ivory-200/80 font-sans">
-                {PARTNERS_DATA.titleSponsor.tagline}
-              </p>
-            </div>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#2B1B10]">
+              {PARTNERS_DATA.titleSponsor.name}
+            </h3>
+            <p className="text-xs sm:text-sm text-[#6E4B28] mt-1 max-w-md">
+              {PARTNERS_DATA.titleSponsor.tagline}
+            </p>
           </div>
         </div>
 
