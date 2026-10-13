@@ -1,6 +1,6 @@
 import React from 'react';
 import { PARTNERS_DATA, EVENT_INFO } from '../data/eventData';
-import { MessageCircle, ArrowRight, Crown, Sparkles, Gem, Shirt, Gamepad2, Hotel, Scissors, Utensils, Plane, Home, HeartHandshake, Soup, Gift, Compass, Users, Leaf } from 'lucide-react';
+import { MessageCircle, ArrowRight, Crown, Sparkles, Gem, Shirt, Gamepad2, Scissors, Utensils, Plane, Home, HeartHandshake, Soup, Gift, Users, Leaf, Zap, Dumbbell, Smile, Camera, Video, ShoppingBag } from 'lucide-react';
 
 export const Sponsors: React.FC = () => {
   // Helper to get category icon for text-based partners
@@ -8,18 +8,19 @@ export const Sponsors: React.FC = () => {
     const r = role.toLowerCase();
     if (r.includes('jewel')) return <Gem className="w-5 h-5 text-gold-400" />;
     if (r.includes('drip') || r.includes('style')) return <Shirt className="w-5 h-5 text-gold-400" />;
-    if (r.includes('gaming')) return <Gamepad2 className="w-5 h-5 text-gold-400" />;
-    if (r.includes('hospitality') || r.includes('resort')) return <Hotel className="w-5 h-5 text-gold-400" />;
-    if (r.includes('salon') || r.includes('lifestyle')) return <Scissors className="w-5 h-5 text-gold-400" />;
-    if (r.includes('food')) return <Utensils className="w-5 h-5 text-gold-400" />;
-    if (r.includes('travel')) return <Plane className="w-5 h-5 text-gold-400" />;
-    if (r.includes('real estate') || r.includes('builder')) return <Home className="w-5 h-5 text-gold-400" />;
     if (r.includes('comfort')) return <HeartHandshake className="w-5 h-5 text-gold-400" />;
+    if (r.includes('textile')) return <ShoppingBag className="w-5 h-5 text-gold-400" />;
+    if (r.includes('visibility') || r.includes('pixel')) return <Camera className="w-5 h-5 text-gold-400" />;
+    if (r.includes('smile') || r.includes('dental')) return <Smile className="w-5 h-5 text-gold-400" />;
+    if (r.includes('gaming')) return <Gamepad2 className="w-5 h-5 text-gold-400" />;
+    if (r.includes('salon') || r.includes('lifestyle')) return <Scissors className="w-5 h-5 text-gold-400" />;
+    if (r.includes('chivda') || r.includes('food')) return <Utensils className="w-5 h-5 text-gold-400" />;
+    if (r.includes('travel')) return <Plane className="w-5 h-5 text-gold-400" />;
+    if (r.includes('real estate') || r.includes('builder') || r.includes('construction')) return <Home className="w-5 h-5 text-gold-400" />;
     if (r.includes('masala')) return <Soup className="w-5 h-5 text-gold-400" />;
     if (r.includes('gift')) return <Gift className="w-5 h-5 text-gold-400" />;
-    if (r.includes('paithani')) return <Compass className="w-5 h-5 text-gold-400" />;
-    if (r.includes('community')) return <Users className="w-5 h-5 text-gold-400" />;
     if (r.includes('sustainability') || r.includes('plogger')) return <Leaf className="w-5 h-5 text-gold-400" />;
+    if (r.includes('media')) return <Video className="w-5 h-5 text-gold-400" />;
     return <Sparkles className="w-5 h-5 text-gold-400" />;
   };
 
@@ -65,7 +66,7 @@ export const Sponsors: React.FC = () => {
             <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
           </div>
 
-          <div className="relative bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] text-[#FFF5DD] rounded-2xl border-2 border-[#D9A441] shadow-2xl p-8 sm:p-10 text-center overflow-hidden group">
+          <div className="relative bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] text-[#FFF5DD] rounded-2xl border-2 border-[#D9A441] shadow-2xl p-6 sm:p-10 text-center overflow-hidden group">
             {/* Ambient Background Glow */}
             <div className="absolute inset-0 bg-radial-glow opacity-30 pointer-events-none" />
             
@@ -73,6 +74,18 @@ export const Sponsors: React.FC = () => {
               <span className="inline-block px-4 py-1 rounded-full bg-gold-500/20 border border-gold-300/40 text-gold-300 text-[10px] sm:text-xs uppercase font-mono tracking-[0.25em] font-bold mb-4">
                 👑 TITLE SPONSOR
               </span>
+
+              {/* AU Small Finance Bank Logo */}
+              {PARTNERS_DATA.titleSponsor.logo && (
+                <div className="h-20 sm:h-28 w-full max-w-sm flex items-center justify-center mb-3 bg-white/95 rounded-xl p-3 shadow-md">
+                  <img
+                    src={PARTNERS_DATA.titleSponsor.logo}
+                    alt={PARTNERS_DATA.titleSponsor.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+              )}
+
               <h3 className="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-gold-200 tracking-wide mb-2 drop-shadow-md">
                 {PARTNERS_DATA.titleSponsor.name}
               </h3>
@@ -84,75 +97,86 @@ export const Sponsors: React.FC = () => {
         </div>
 
         {/* ──────────────────────────────────────────── */}
-        {/* ORGANIZERS & CO-POWERED BY */}
+        {/* POWERED BY & CO-POWERED BY */}
         {/* ──────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
           
-          {/* Organizers (2 Cols) */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
-                Event Organizers
-              </span>
-              <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
+          {/* Powered By — Kinetic EV */}
+          <div className="bg-white rounded-2xl border-2 border-[#D9A441]/70 shadow-md p-6 sm:p-7 flex flex-col items-center text-center justify-center hover:shadow-lg transition-all">
+            <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#FDF6E9] border border-[#D9A441]/40 text-[10px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-3">
+              <Zap className="w-3.5 h-3.5 text-gold-500" />
+              {PARTNERS_DATA.poweredBy.role}
+            </span>
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-950 to-emerald-900 flex items-center justify-center border border-gold-400/40 shadow-inner mb-3">
+              <Zap className="w-7 h-7 text-gold-300" />
             </div>
-
-            <div className="bg-white rounded-2xl border border-[#D9A441] shadow-md p-6 sm:p-7">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-center">
-                {PARTNERS_DATA.organizers.map((org, idx) => (
-                  <div key={idx} className="flex flex-col items-center group">
-                    <div className="h-16 sm:h-20 flex items-center justify-center mb-2">
-                      <img
-                        src={org.logo}
-                        alt={org.name}
-                        className="max-h-full max-w-[140px] object-contain transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    <span className="text-[9px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-0.5">
-                      {org.role}
-                    </span>
-                    <h4 className="font-serif text-sm sm:text-base font-bold text-[#2B1B10]">
-                      {org.name}
-                    </h4>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#2B1B10]">
+              {PARTNERS_DATA.poweredBy.name}
+            </h4>
+            <p className="text-xs text-[#6E4B28] mt-1">
+              {PARTNERS_DATA.poweredBy.tagline}
+            </p>
           </div>
 
-          {/* Co-Powered By (1 Col) */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
-                Co-Powered By
-              </span>
-              <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
+          {/* Co-Powered By — Indian Fitness Gym */}
+          <div className="bg-white rounded-2xl border-2 border-[#D9A441]/70 shadow-md p-6 sm:p-7 flex flex-col items-center text-center justify-center hover:shadow-lg transition-all">
+            <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#FDF6E9] border border-[#D9A441]/40 text-[10px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-3">
+              <Dumbbell className="w-3.5 h-3.5 text-gold-500" />
+              {PARTNERS_DATA.coPoweredBy.role}
+            </span>
+            <div className="h-14 w-full flex items-center justify-center mb-3">
+              <img
+                src={PARTNERS_DATA.coPoweredBy.logo}
+                alt={PARTNERS_DATA.coPoweredBy.name}
+                className="max-h-full max-w-[160px] object-contain invert"
+              />
             </div>
-
-            <div className="bg-white rounded-2xl border border-[#D9A441] shadow-md p-6 sm:p-7 flex flex-col items-center text-center justify-center h-[calc(100%-2rem)]">
-              <div className="h-16 sm:h-20 w-full flex items-center justify-center mb-2">
-                <img
-                  src={PARTNERS_DATA.coPoweredBy.logo}
-                  alt={PARTNERS_DATA.coPoweredBy.name}
-                  className="max-h-full max-w-[160px] object-contain invert"
-                />
-              </div>
-              <span className="text-[9px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-0.5">
-                {PARTNERS_DATA.coPoweredBy.role}
-              </span>
-              <h4 className="font-serif text-base font-bold text-[#2B1B10]">
-                {PARTNERS_DATA.coPoweredBy.name}
-              </h4>
-              <p className="text-[10px] text-[#6E4B28] mt-0.5">
-                {PARTNERS_DATA.coPoweredBy.tagline}
-              </p>
-            </div>
+            <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#2B1B10]">
+              {PARTNERS_DATA.coPoweredBy.name}
+            </h4>
+            <p className="text-xs text-[#6E4B28] mt-1">
+              {PARTNERS_DATA.coPoweredBy.tagline}
+            </p>
           </div>
 
         </div>
 
         {/* ──────────────────────────────────────────── */}
-        {/* OFFICIAL CATEGORY PARTNERS (14 Brands) */}
+        {/* EVENT ORGANIZERS */}
+        {/* ──────────────────────────────────────────── */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-[11px] uppercase font-mono tracking-[0.25em] font-bold text-[#8A5A1A]">
+              Event Organizers
+            </span>
+            <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
+          </div>
+
+          <div className="bg-white rounded-2xl border border-[#D9A441] shadow-md p-6 sm:p-7">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-center">
+              {PARTNERS_DATA.organizers.map((org, idx) => (
+                <div key={idx} className="flex flex-col items-center group">
+                  <div className="h-16 sm:h-20 flex items-center justify-center mb-2">
+                    <img
+                      src={org.logo}
+                      alt={org.name}
+                      className="max-h-full max-w-[140px] object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <span className="text-[9px] uppercase font-mono tracking-wider text-[#8A5A1A] font-bold mb-0.5">
+                    {org.role}
+                  </span>
+                  <h4 className="font-serif text-sm sm:text-base font-bold text-[#2B1B10]">
+                    {org.name}
+                  </h4>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ──────────────────────────────────────────── */}
+        {/* OFFICIAL CATEGORY PARTNERS (16 Brands) */}
         {/* ──────────────────────────────────────────── */}
         <div className="mb-14">
           <div className="flex items-center gap-3 mb-6">
@@ -180,7 +204,7 @@ export const Sponsors: React.FC = () => {
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-full max-w-[130px] object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="max-h-full max-w-[130px] object-contain transition-transform duration-300 group-hover:scale-105 rounded-lg"
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-950 to-emerald-900 flex items-center justify-center border border-gold-400/40 shadow-inner group-hover:scale-110 transition-transform">

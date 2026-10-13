@@ -188,7 +188,14 @@ export const PARTNERS_DATA = {
   titleSponsor: {
     name: 'AU Small Finance Bank',
     role: 'TITLE SPONSOR',
-    tagline: 'Empowering Navratri Celebrations Across Nashik'
+    tagline: 'Empowering Navratri Celebrations Across Nashik',
+    logo: '/assets/partners/au-small-finance-bank-logo.png'
+  },
+
+  poweredBy: {
+    name: 'Kinetic EV',
+    role: 'POWERED BY',
+    tagline: 'Driving The Green Festival Revolution'
   },
 
   coPoweredBy: {
@@ -210,6 +217,30 @@ export const PARTNERS_DATA = {
       role: 'Drip Partner',
       tagline: 'Official Festive Style & Drip',
       logo: '/assets/partners/the-last-age-logo.png'
+    },
+    {
+      name: 'Ekta Enterprises',
+      role: 'Official Comfort Partner',
+      tagline: 'Complete Home Comfort & Décor',
+      logo: '/assets/partners/ekta-enterprises-logo.jpg'
+    },
+    {
+      name: 'Pragati Textile Market',
+      role: 'Official Textile Partner',
+      tagline: 'Since 1982 • Heritage Textile Market',
+      logo: '/assets/partners/pragati-textile-logo.png'
+    },
+    {
+      name: 'The Pixel Story',
+      role: 'Visibility Partner',
+      tagline: 'Capturing Cinematic Memories',
+      logo: '/assets/partners/the-pixel-story-logo.jpg'
+    },
+    {
+      name: 'Dentiva Dental & Implant Studio',
+      role: 'Smile Partner',
+      tagline: 'Crafting Royal Festive Smiles',
+      logo: '/assets/partners/dentiva-dental-studio-logo.jpg'
     },
     {
       name: 'Fizzy Fox',
@@ -234,14 +265,9 @@ export const PARTNERS_DATA = {
       tagline: 'Your Trusted Travel Companion'
     },
     {
-      name: 'Akshay Builders',
+      name: 'Aditya Construction',
       role: 'Real Estate Partner',
       tagline: 'Building Nashik’s Finest Landmarks'
-    },
-    {
-      name: 'Ekta Enterprises',
-      role: 'Official Comfort Partner',
-      tagline: 'Festival Comfort & Quality'
     },
     {
       name: 'Kothmire Masale',
@@ -254,19 +280,19 @@ export const PARTNERS_DATA = {
       tagline: 'Festive Moments & Surprises'
     },
     {
-      name: 'Kalashahi Paithani',
-      role: 'Paithani Partner',
-      tagline: 'Heritage Festive Weaves'
-    },
-    {
-      name: 'Anabolic Club',
-      role: 'Community Partner',
-      tagline: 'Youth & Strength Community'
-    },
-    {
       name: 'Fitness Nasik Ploggers',
       role: 'Sustainability Partner',
       tagline: 'Clean & Green Nashik Movement'
+    },
+    {
+      name: 'Kondaji Chivda',
+      role: 'Chivda Partner',
+      tagline: 'Nashik’s Legendary Heritage Taste'
+    },
+    {
+      name: 'Dhruv Creation',
+      role: 'Media Partner',
+      tagline: 'Creative Media & Coverage'
     }
   ]
 };
