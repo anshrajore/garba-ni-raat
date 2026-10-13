@@ -195,7 +195,8 @@ export const PARTNERS_DATA = {
   poweredBy: {
     name: 'Kinetic EV',
     role: 'POWERED BY',
-    tagline: 'Driving The Green Festival Revolution'
+    tagline: 'Driving The Green Festival Revolution',
+    logo: '/assets/partners/kinetic-ev-logo.png'
   },
 
   coPoweredBy: {
@@ -222,7 +223,7 @@ export const PARTNERS_DATA = {
       name: 'Ekta Enterprises',
       role: 'Official Comfort Partner',
       tagline: 'Complete Home Comfort & Décor',
-      logo: '/assets/partners/ekta-enterprises-logo.jpg'
+      logo: '/assets/partners/ekta-enterprises-logo.png'
     },
     {
       name: 'Pragati Textile Market',
@@ -255,44 +256,58 @@ export const PARTNERS_DATA = {
       logo: '/assets/partners/vishal-salon-logo.png'
     },
     {
-      name: 'Dhapte',
-      role: 'Food Partner',
-      tagline: 'Authentic Festive Flavours'
-    },
-    {
-      name: 'Sony Holidays',
-      role: 'Travel Partner',
-      tagline: 'Your Trusted Travel Companion'
-    },
-    {
       name: 'Aditya Construction',
       role: 'Real Estate Partner',
-      tagline: 'Building Nashik’s Finest Landmarks'
+      tagline: 'Building Nashik’s Finest Landmarks',
+      logo: '/assets/partners/aditya-construction-logo.png'
     },
     {
       name: 'Kothmire Masale',
       role: 'Masala Partner',
-      tagline: 'Authentic Tradition & Taste'
+      tagline: 'Authentic Tradition & Taste',
+      logo: '/assets/partners/kothmire-masale-logo.png'
     },
     {
-      name: 'Sony Gifts',
-      role: 'Gifting Partner',
-      tagline: 'Festive Moments & Surprises'
-    },
-    {
-      name: 'Fitness Nasik Ploggers',
-      role: 'Sustainability Partner',
-      tagline: 'Clean & Green Nashik Movement'
+      name: 'Soni Holidays',
+      role: 'Travel Partner',
+      tagline: 'Your Trusted Travel Companion',
+      logo: '/assets/partners/soni-holidays-logo.png'
     },
     {
       name: 'Kondaji Chivda',
       role: 'Chivda Partner',
-      tagline: 'Nashik’s Legendary Heritage Taste'
+      tagline: 'Wavre Bandhu • Since 1920',
+      logo: '/assets/partners/kondaji-chivda-logo.png'
+    },
+    {
+      name: 'Fitness Nasik Ploggers',
+      role: 'Sustainability Partner',
+      tagline: 'Clean & Green Nashik Movement',
+      logo: '/assets/partners/nashik-ploggers-logo.png'
     },
     {
       name: 'Dhruv Creation',
       role: 'Media Partner',
-      tagline: 'Creative Media & Coverage'
+      tagline: 'Creative Media & Coverage',
+      logo: '/assets/partners/dhruv-creation-logo.png'
+    },
+    {
+      name: 'Young Indians (Yi)',
+      role: 'Youth Leadership Partner',
+      tagline: 'We Can We Will • Nashik Chapter',
+      logo: '/assets/partners/young-indians-logo.png'
+    },
+    {
+      name: 'Dhapte',
+      role: 'Food Partner',
+      tagline: 'Authentic Festive Flavours',
+      logo: '/assets/partners/dhapte-logo.png'
+    },
+    {
+      name: 'Sony Gifts',
+      role: 'Gifting Partner',
+      tagline: 'Festive Moments & Surprises',
+      logo: '/assets/partners/sony-gifts-logo.png'
     }
   ]
 };

@@ -66,30 +66,31 @@ export const Sponsors: React.FC = () => {
             <span className="h-[1px] flex-1 bg-[#D9A441]/40" />
           </div>
 
-          <div className="relative bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] text-[#FFF5DD] rounded-2xl border-2 border-[#D9A441] shadow-2xl p-6 sm:p-10 text-center overflow-hidden group">
-            {/* Ambient Background Glow */}
-            <div className="absolute inset-0 bg-radial-glow opacity-30 pointer-events-none" />
-            
-            <div className="relative z-10 flex flex-col items-center justify-center">
-              <span className="inline-block px-4 py-1 rounded-full bg-gold-500/20 border border-gold-300/40 text-gold-300 text-[10px] sm:text-xs uppercase font-mono tracking-[0.25em] font-bold mb-4">
+          <div className="relative rounded-2xl border-2 border-[#D9A441] shadow-2xl overflow-hidden group">
+            {/* Top gradient bar */}
+            <div className="bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] px-6 pt-5 pb-3 text-center">
+              <span className="inline-block px-4 py-1 rounded-full bg-gold-500/20 border border-gold-300/40 text-gold-300 text-[10px] sm:text-xs uppercase font-mono tracking-[0.25em] font-bold">
                 👑 TITLE SPONSOR
               </span>
+            </div>
 
-              {/* AU Small Finance Bank Logo */}
-              {PARTNERS_DATA.titleSponsor.logo && (
-                <div className="h-20 sm:h-28 w-full max-w-sm flex items-center justify-center mb-3 bg-white/95 rounded-xl p-3 shadow-md">
-                  <img
-                    src={PARTNERS_DATA.titleSponsor.logo}
-                    alt={PARTNERS_DATA.titleSponsor.name}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
-              )}
+            {/* AU Logo — Full width with brand purple background */}
+            {PARTNERS_DATA.titleSponsor.logo && (
+              <div className="bg-[#702082] px-6 sm:px-12 md:px-20 py-6 sm:py-8 flex items-center justify-center">
+                <img
+                  src={PARTNERS_DATA.titleSponsor.logo}
+                  alt={PARTNERS_DATA.titleSponsor.name}
+                  className="w-full max-w-sm sm:max-w-md md:max-w-xl h-auto block"
+                />
+              </div>
+            )}
 
-              <h3 className="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-gold-200 tracking-wide mb-2 drop-shadow-md">
+            {/* Bottom info bar */}
+            <div className="bg-gradient-to-r from-[#003835] via-[#002624] to-[#001716] px-6 py-4 sm:py-5 text-center">
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-extrabold text-gold-200 tracking-wide mb-1 drop-shadow-md">
                 {PARTNERS_DATA.titleSponsor.name}
               </h3>
-              <p className="text-xs sm:text-sm text-ivory-200/80 max-w-md font-sans">
+              <p className="text-xs sm:text-sm text-ivory-200/80 font-sans">
                 {PARTNERS_DATA.titleSponsor.tagline}
               </p>
             </div>
@@ -107,8 +108,18 @@ export const Sponsors: React.FC = () => {
               <Zap className="w-3.5 h-3.5 text-gold-500" />
               {PARTNERS_DATA.poweredBy.role}
             </span>
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-950 to-emerald-900 flex items-center justify-center border border-gold-400/40 shadow-inner mb-3">
-              <Zap className="w-7 h-7 text-gold-300" />
+            <div className="h-16 w-full flex items-center justify-center mb-3">
+              {PARTNERS_DATA.poweredBy.logo ? (
+                <img
+                  src={PARTNERS_DATA.poweredBy.logo}
+                  alt={PARTNERS_DATA.poweredBy.name}
+                  className="max-h-full max-w-[200px] object-contain"
+                />
+              ) : (
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-950 to-emerald-900 flex items-center justify-center border border-gold-400/40 shadow-inner">
+                  <Zap className="w-7 h-7 text-gold-300" />
+                </div>
+              )}
             </div>
             <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#2B1B10]">
               {PARTNERS_DATA.poweredBy.name}
